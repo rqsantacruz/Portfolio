@@ -278,3 +278,24 @@ h1 {
   font-weight: 700;
 }
 /* 세번째 섹션 */
+.sec3 > .con {
+  width: 1400px;
+  margin: 0 auto;
+}
+.sec3 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+.sec3 > .con > .box_wrap > .box {
+  background-color: #f6f6f6;
+  padding: 20px 40px 40px;
+  border-radius: 15px;
+}
+.sec3 > .con > .box_wrap h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
