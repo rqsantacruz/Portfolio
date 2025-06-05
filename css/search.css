@@ -1,0 +1,549 @@
+@import url(./reset.css);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #ededed;
+}
+.head_wrap {
+  width: calc(100% - 160px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head_left {
+  display: flex;
+  gap: 140px;
+}
+.head_left > button {
+  width: 48px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.head_left > button:hover .all_menu {
+  display: flex;
+}
+.all_menu {
+  display: none;
+  flex-direction: column;
+  width: 240px;
+  height: fit-content;
+  background-color: #fff;
+  position: absolute;
+  top: 81px;
+  left: 0;
+  text-align: start;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 20px 12px;
+}
+
+.all_menu > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 1px solid #ededed;
+}
+.all_menu > li:hover > a {
+  color: #8744ff;
+}
+.all_menu > .login {
+  display: block;
+  width: 216px;
+  height: 40px;
+  background-color: #8744ff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 80px;
+}
+.info_wrap {
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.info_wrap input {
+  outline: none;
+  border: none;
+  background-color: #ededed;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.info_wrap input:focus {
+  background-color: #d9d9d9;
+}
+.info_wrap input:first-child {
+  width: fit-content;
+}
+.head_right > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: var(--sec-p-size);
+  padding: 16px 24px;
+}
+/* 섹션 */
+main {
+  width: 100%;
+  height: auto;
+}
+.con {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+/* 왼쪽섹션 */
+.left_con {
+  width: 300px;
+  height: fit-content;
+}
+/* 지도 */
+.map_wrap {
+  width: 100%;
+  height: fit-content;
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
+}
+.map_wrap > a {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background: url(../img/sub/search/map.PNG) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.map_wrap > a > span {
+  font-size: 14px;
+  color: #8744ff;
+  display: block;
+  width: 110px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* 가격 범위 */
+.bar_wrap {
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.bar_wrap > label > input {
+  width: 300px;
+  height: 2px;
+  margin: 16px 0;
+}
+.bar_wrap .price {
+  font-size: 14px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+}
+/* 숙소 종류 */
+.check_sec {
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
+}
+.check_sec > h3 {
+  margin-bottom: 28px;
+}
+.check_sec .check_wrap {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.check_sec .check_wrap > label {
+  width: 140px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+/* 별점 */
+.review_wrap {
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
+}
+.review_wrap > h3 {
+  margin-bottom: 28px;
+}
+.review {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 20px;
+}
+.review > button {
+  width: 50px;
+  height: 29px;
+  color: #8744ff;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+}
+/* 오른쪽 섹션 */
+.right_con {
+  padding: 28px 0;
+  width: 1060px;
+  height: fit-content;
+}
+.result {
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.result > h2 {
+  font-size: var(--sec-title-size2);
+  font-weight: 500;
+}
+.list_btn > button {
+  width: 120px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+  background-color: #ededed;
+  position: relative;
+}
+.list_btn > button > img {
+  width: 16px;
+  height: 16px;
+}
+.list_btn > button > .btn_list {
+  position: absolute;
+  background-color: #ededed;
+  width: 120px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 30px;
+  left: 0;
+  display: none;
+}
+.list_btn > button:hover > .btn_list {
+  display: flex;
+}
+.list_btn > button > .btn_list > li:hover {
+  color: #8744ff;
+}
+.list_btn > button > .btn_list > li:first-child {
+  font-weight: 700;
+}
+/* 카드 */
+.card_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.top_card {
+  width: 100%;
+  display: flex;
+  height: 308px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+}
+.card {
+  width: 100%;
+  height: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.card:hover {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.card:hover .card_review > span {
+  background-color: #8744ff;
+  color: #fff;
+}
+.card > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+}
+.card > a > img {
+  width: 400px;
+  height: 280px;
+}
+.text_wrap {
+  width: 660px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.text_left {
+  font-size: 14px;
+}
+.text_left > p {
+  color: #aaa;
+  margin-bottom: 8px;
+  font-weight: 300;
+}
+.text_left > h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.text_left > h2 {
+  font-size: var(--sec-title-size2);
+  font-weight: 700;
+  line-height: 32px;
+}
+.card_review {
+  display: flex;
+  gap: 8px;
+}
+.card_review > span {
+  width: 50px;
+  height: 29px;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 29px;
+  color: #8744ff;
+  font-weight: 300;
+  transition: 0.2s;
+}
+.card_review > p {
+  color: #8744ff;
+  height: 29px;
+  line-height: 29px;
+  font-weight: 300;
+}
+.text_right {
+  display: flex;
+  align-items: end;
+  line-height: 52px;
+}
+.text_right > h3 {
+  font-size: 28px;
+}
+.text_right > p {
+  font-size: var(--sec-p-size);
+  font-weight: 600;
+  line-height: 44px;
+}
+/* 페이지 번호 */
+.button_num {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+.button_num > button {
+  background-color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.button_num img {
+  width: 18px;
+  height: 18px;
+}
+.button_num a {
+  display: block;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+.button_num a:first-of-type {
+  font-weight: 700;
+}
+.button_num > button:first-child > img {
+  opacity: 0.3;
+}
+/* 푸터 */
+footer {
+  width: 100%;
+  font-size: 14px;
+  color: #999;
+}
+/* footer top */
+.foot_top {
+  width: 1400px;
+  height: 60px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  margin: 0 auto;
+}
+.foot_top > ul {
+  display: flex;
+  gap: 50px;
+  line-height: 60px;
+  font-weight: 500;
+}
+.foot_top > ul > li > a {
+  color: #999;
+}
+.foot_top > ul > li:nth-child(2) > a {
+  color: #333;
+}
+/* footer bottom */
+.foot_bottom {
+  width: 1400px;
+  padding: 50px 0;
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left > p {
+  line-height: 20px;
+}
+.center {
+  width: fit-content;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.center > .center_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.center > .center_top > h3 {
+  color: #404040;
+  font-size: var(--sec-p-size);
+  font-weight: 500;
+}
+.center > .center_top > h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+.center > p {
+  color: #808080;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+.center > a {
+  display: block;
+  color: #404040;
+  font-size: var(--sec-p-size);
+  font-weight: 600;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+.right {
+  width: fit-content;
+  height: 166px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+}
+.right > h3 {
+  font-size: var(--sec-p-size);
+  color: #3e3e3e;
+  font-weight: 500;
+  line-height: 30px;
+}
+.num_wrap {
+  display: flex;
+  width: 100%;
+}
+.num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 20px;
+}
+.num:first-child {
+  border-right: 1px solid #bfbfbf;
+}
+.num_wrap p {
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
+}
+.num_wrap h3 {
+  color: #323232;
+  font-size: var(--sec-p-size);
+  line-height: 24px;
+  font-weight: 600;
+}

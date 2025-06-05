@@ -1,0 +1,280 @@
+@import url(./reset.css);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #ededed;
+}
+.head_wrap {
+  width: calc(100% - 160px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head_left {
+  display: flex;
+  gap: 140px;
+}
+.head_left > button {
+  width: 48px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.head_left > button:hover .all_menu {
+  display: flex;
+}
+.all_menu {
+  display: none;
+  flex-direction: column;
+  width: 240px;
+  height: fit-content;
+  background-color: #fff;
+  position: absolute;
+  top: 81px;
+  left: 0;
+  text-align: start;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 20px 12px;
+}
+
+.all_menu > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 1px solid #ededed;
+}
+.all_menu > li:hover > a {
+  color: #8744ff;
+}
+.all_menu > .login {
+  display: block;
+  width: 216px;
+  height: 40px;
+  background-color: #8744ff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 80px;
+}
+.info_wrap {
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.info_wrap input {
+  outline: none;
+  border: none;
+  background-color: #ededed;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+.info_wrap input:focus {
+  background-color: #d9d9d9;
+}
+.info_wrap input:first-child {
+  width: fit-content;
+}
+.head_right > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: var(--sec-p-size);
+  padding: 16px 24px;
+}
+
+/* 첫번째 섹션 */
+.sec1 {
+  width: 100%;
+  height: fit-content;
+}
+.sec1 .con {
+  width: 1400px;
+  margin: 0 auto;
+}
+.top_wrap > span {
+  display: block;
+  font-size: 18px;
+  margin: 32px 0 12px 0;
+}
+.top_wrap > h2 {
+  font-size: var(--sec-title-size);
+  font-weight: 600;
+  line-height: 40px;
+}
+.top_wrap > h4 {
+  font-size: 14px;
+  color: #444;
+}
+.sec1 > .con .img_wrap {
+  display: flex;
+  gap: 20px;
+  margin: 40px 0;
+}
+.sec1 > .con .img_wrap > .left {
+  width: 690px;
+  height: 512px;
+  overflow: hidden;
+  border-radius: 15px 0 0 15px;
+}
+.sec1 > .con .img_wrap > .right {
+  width: 690px;
+  height: 512px;
+  overflow: hidden;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.sec1 > .con .img_wrap > .right > img {
+  width: 339px;
+  height: 250px;
+}
+.sec1 > .con .img_wrap > .right > img:nth-child(2) {
+  border-radius: 0 15px 0 0;
+}
+.sec1 > .con .img_wrap > .right > img:nth-child(4) {
+  border-radius: 0 0 15px 0;
+}
+.bottom_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.bottom_wrap > .left > button {
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  font-size: var(--sec-p-size);
+  padding: 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.bottom_wrap > .left > p {
+  color: var(--main-black-color2);
+  font-size: 18px;
+}
+.bottom_wrap > .right > .icon_wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.bottom_wrap > .right > .icon_wrap > button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.bottom_wrap > .right > .icon_wrap > button > img {
+  width: 28px;
+  height: 28px;
+}
+.bottom_wrap > .right > .price {
+  height: fit-content;
+  display: flex;
+  align-items: end;
+}
+.bottom_wrap > .right > .price > h3 {
+  font-size: var(--sec-title-size);
+  font-weight: 600;
+}
+.bottom_wrap > .right > .price > span {
+  font-size: var(--sec-title-size2);
+}
+/* 두번째 섹션 */
+.sec2 {
+  width: 100%;
+}
+.sec2 > .con {
+  width: 1400px;
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.sec2 > .con > div {
+  width: 690px;
+  height: 240px;
+  box-sizing: border-box;
+  border: 1px solid #ededed;
+  border-radius: 15px;
+  font-size: 14px;
+  align-items: flex-start;
+  padding: 32px;
+}
+.sec2 > .con > .left > .text_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sec2 > .con > .left span {
+  width: 50px;
+  height: 30px;
+  background-color: #8744ff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 12px;
+}
+.sec2 > .con > .left p {
+  font-weight: 500;
+}
+.sec2 > .con > .left button {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+.sec2 > .con > .right button {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+/* 세번째 섹션 */
