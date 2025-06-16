@@ -286,12 +286,18 @@ h1 {
 .sec3 > .con {
   width: 1400px;
   margin: 0 auto;
+  border-bottom: 1px solid #ededed;
 }
 .sec3 > .con > h3 {
   font-size: var(--sec-title-size2);
   line-height: 40px;
   font-weight: 600;
   margin-bottom: 32px;
+}
+.sec3 > .con > .box_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .sec3 > .con > .box_wrap > .box {
   background-color: #f6f6f6;
@@ -382,4 +388,37 @@ h1 {
   border-radius: 8px;
   color: #fff;
   margin-top: 12px;
+}
+.sec3 > .con > .btn_wrap {
+  display: flex;
+  justify-content: center;
+}
+.sec3 > .con > .btn_wrap > button {
+  width: 240px;
+  height: 40px;
+  font-size: var(--sec-p-size);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 40px 0;
+  cursor: pointer;
+  line-height: 40px;
+}
+/* 네번째 섹션 */
+.sec4 > .con {
+  width: 1400px;
+  height: auto;
+  margin: 0 auto;
+  border-bottom: 1px solid #ededed;
+}
+.sec4 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec4 > .con > p {
+  font-size: var(--sec-p-size);
+  color: #444;
+  line-height: 1.2;
+  margin-bottom: 32px;
 }

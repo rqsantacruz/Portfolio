@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>트래블러</title>
     <link rel="stylesheet" href="./css/layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- 헤더 -->
@@ -96,140 +101,270 @@
       </section>
       <!-- 두번째 섹션 -->
       <section class="sec2">
-        <h3>내가 관심있는 지역의 추천 숙소</h3>
-        <div class="card_wrap">
-          <button class="arrow">
-            <img src="./img/main/Ico_left.png" alt="왼쪽화살표" />
-          </button>
-          <!-- 카드1 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
+        <div class="con">
+          <h3>내가 관심있는 지역의 추천 숙소</h3>
+          <div class="swiper-button-prev swiper2-prev"></div>
+          <div class="swiper-button-next swiper2-next"></div>
+          <div class="sec2Swiper swiper">
+            <div class="card_wrap swiper-wrapper">
+              <!-- 카드1 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
                 </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
+              </div>
+              <!-- 카드2 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
                 </div>
-              </a>
+              </div>
+              <!-- 카드3 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드4 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드5 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드6 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드7 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드8 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- 카드2 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- 카드3 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- 카드4 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <button class="arrow">
-            <img src="./img/main/Ico_right.png" alt="오른쪽화살표" />
-          </button>
         </div>
       </section>
       <!-- 세번째 섹션 -->
       <section class="sec3">
-        <div class="banner_wrap">
-          <div class="banner">
-            <a href="#">
-              <h3>
-                매일 최대 9천원<br />
-                할인받고 놀 준비 완료!
-              </h3>
-              <p>토스페이로 결제하기</p>
-            </a>
+        <div class="con">
+          <div class="sec3Swiper sec3_swiper">
+            <div class="banner_wrap swiper-wrapper">
+              <!-- 1 -->
+              <div class="banner swiper-slide">
+                <a href="#">
+                  <h3>
+                    매일 최대 9천원<br />
+                    할인받고 놀 준비 완료!
+                  </h3>
+                  <p>토스페이로 결제하기</p>
+                </a>
+              </div>
+              <!-- 2 -->
+              <div class="banner swiper-slide">
+                <a href="#">
+                  <h3>
+                    아직 숙소 예약을 안하셨다구요?<br />
+                    매일 오후 7시~11시 타임딜!
+                  </h3>
+                  <p>지금 확인하러 가기</p>
+                </a>
+              </div>
+              <!-- 1 -->
+              <div class="banner swiper-slide">
+                <a href="#">
+                  <h3>
+                    매일 최대 9천원<br />
+                    할인받고 놀 준비 완료!
+                  </h3>
+                  <p>토스페이로 결제하기</p>
+                </a>
+              </div>
+              <!-- 2 -->
+              <div class="banner swiper-slide">
+                <a href="#">
+                  <h3>
+                    아직 숙소 예약을 안하셨다구요?<br />
+                    매일 오후 7시~11시 타임딜!
+                  </h3>
+                  <p>지금 확인하러 가기</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination sec3_pagination"></div>
           </div>
-          <div class="banner">
-            <a href="#">
-              <h3>
-                아직 숙소 예약을 안하셨다구요?<br />
-                매일 오후 7시~11시 타임딜!
-              </h3>
-              <p>지금 확인하러 가기</p>
-            </a>
-          </div>
-        </div>
-        <div class="click">
-          <span class="on"></span>
-          <span></span>
-          <span></span>
-          <span></span>
         </div>
       </section>
       <!-- 네번째 섹션 -->
       <section class="sec4">
         <h3>1인특가 추천 여행지</h3>
         <div class="rec_wrap">
-          <button class="arrow">
-            <img src="./img/main/Ico_left.png" alt="왼쪽화살표" />
-          </button>
           <!-- 왼쪽카드 -->
           <div class="rec_sub">
             <a href="#">중국</a>
@@ -248,9 +383,6 @@
           <div class="rec_sub">
             <a href="#">싱가포르</a>
           </div>
-          <button class="arrow">
-            <img src="./img/main/Ico_right.png" alt="오른쪽화살표" />
-          </button>
         </div>
       </section>
       <!-- 다섯번째 섹션 -->
@@ -337,134 +469,285 @@
       </section>
       <!-- 여섯번째 섹션 -->
       <section class="sec2">
-        <h3>국내 여행지 제휴 숙소</h3>
-        <div class="card_wrap">
-          <button class="arrow">
-            <img src="./img/main/Ico_left.png" alt="왼쪽화살표" />
-          </button>
-          <!-- 카드1 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
+        <div class="con">
+          <h3>내가 관심있는 지역의 추천 숙소</h3>
+          <div class="swiper-button-prev swiper6-prev"></div>
+          <div class="swiper-button-next swiper6-next"></div>
+          <div class="sec6Swiper swiper">
+            <div class="card_wrap swiper-wrapper">
+              <!-- 카드1 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
                 </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
+              </div>
+              <!-- 카드2 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
                 </div>
-              </a>
+              </div>
+              <!-- 카드3 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드4 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드5 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드6 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드7 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드8 -->
+              <div class="card swiper-slide">
+                <a href="#">
+                  <img
+                    src="./img/main/./hotel_card.jpg"
+                    alt="케이스케 캡슐호텔"
+                  />
+                </a>
+                <div class="card_text">
+                  <a href="#">
+                    <div class="text_top">
+                      <p>일본 후쿠오카</p>
+                      <button>
+                        <img src="./img/main/none_heart.png" alt="찜하기" />
+                      </button>
+                    </div>
+                    <h3>케이스케 캡슐호텔</h3>
+                    <h2>50,500원~</h2>
+                    <div class="text_bottom">
+                      <span>★4.8</span>
+                      <span>(1,729)</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- 카드2 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- 카드3 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- 카드4 -->
-          <div class="card">
-            <a href="#">
-              <img src="./img/main/./hotel_card.jpg" alt="케이스케 캡슐호텔" />
-            </a>
-            <div class="card_text">
-              <a href="#">
-                <div class="text_top">
-                  <p>일본 후쿠오카</p>
-                  <button>
-                    <img src="./img/main/none_heart.png" alt="찜하기" />
-                  </button>
-                </div>
-                <h3>케이스케 캡슐호텔</h3>
-                <h2>50,500원~</h2>
-                <div class="text_bottom">
-                  <span>★4.8</span>
-                  <span>(1,729)</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <button class="arrow">
-            <img src="./img/main/Ico_right.png" alt="오른쪽화살표" />
-          </button>
         </div>
       </section>
       <!-- 일곱번째 섹션 -->
       <section class="sec7">
-        <h3>이런 여행은 어떠세요?</h3>
-        <div class="img_wrap">
-          <button class="arrow">
-            <img src="./img/main/Ico_left.png" alt="왼쪽화살표" />
-          </button>
-          <div>
-            <a href="#">
-              <h3>트래킹</h3>
-              <p>
-                국내부터 해외까지!<br />
-                세계 곳곳의 숨겨진 트래킹코스를<br />
-                지금 바로 알아보세요!
-              </p>
-            </a>
+        <div class="con">
+          <h3>이런 여행은 어떠세요?</h3>
+          <div class="sec7Swiper sec7_swiper">
+            <div class="img_wrap swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>트래킹</h3>
+                  <p>
+                    국내부터 해외까지!<br />
+                    세계 곳곳의 숨겨진 트래킹코스를<br />
+                    지금 바로 알아보세요!
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>문화/예술</h3>
+                  <p>
+                    각 나라의 문화와 예술에는<br />
+                    그들의 지혜와 철학이 담겨있습니다.<br />
+                    삶에 한 번 뿐일 수 있는 경험을 해보세요!
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>트래킹</h3>
+                  <p>
+                    국내부터 해외까지!<br />
+                    세계 곳곳의 숨겨진 트래킹코스를<br />
+                    지금 바로 알아보세요!
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>문화/예술</h3>
+                  <p>
+                    각 나라의 문화와 예술에는<br />
+                    그들의 지혜와 철학이 담겨있습니다.<br />
+                    삶에 한 번 뿐일 수 있는 경험을 해보세요!
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>트래킹</h3>
+                  <p>
+                    국내부터 해외까지!<br />
+                    세계 곳곳의 숨겨진 트래킹코스를<br />
+                    지금 바로 알아보세요!
+                  </p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <h3>문화/예술</h3>
+                  <p>
+                    각 나라의 문화와 예술에는<br />
+                    그들의 지혜와 철학이 담겨있습니다.<br />
+                    삶에 한 번 뿐일 수 있는 경험을 해보세요!
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
-          <div>
-            <a href="#">
-              <h3>문화/예술</h3>
-              <p>
-                각 나라의 문화와 예술에는<br />
-                그들의 지혜와 철학이 담겨있습니다.<br />
-                삶에 한 번 뿐일 수 있는 경험을 해보세요!
-              </p>
-            </a>
-          </div>
-          <button class="arrow">
-            <img src="./img/main/Ico_right.png" alt="오른쪽화살표" />
-          </button>
         </div>
       </section>
     </main>
@@ -518,5 +801,60 @@
         </div>
       </div>
     </footer>
+    <!-- js -->
+    <!-- 두번째 섹션 -->
+    <script>
+      var swiper = new Swiper('.sec2Swiper', {
+        cssMode: true, //옵션
+        slidesPerView: 4, //보여질 개수
+        slidesPerGroup: 4, //한 번에 슬라이딩될 개수
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper2-next',
+          prevEl: '.swiper2-prev',
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+    <!-- 세번째 섹션 -->
+    <script>
+      var sec3Swiper = new Swiper('.sec3_swiper', {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        pagination: {
+          el: '.sec3_pagination',
+          clickable: true,
+        },
+      });
+    </script>
+    <!-- 여섯번째 섹션 -->
+    <script>
+      var swiper = new Swiper('.sec6Swiper', {
+        cssMode: true, //옵션
+        slidesPerView: 4, //보여질 개수
+        slidesPerGroup: 4, //한 번에 슬라이딩될 개수
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper6-next',
+          prevEl: '.swiper6-prev',
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+    <!-- 일곱번째 섹션 -->
+    <script>
+      var sec7Swiper = new Swiper('.sec7_swiper', {
+        slidesPerView: 2, //보여질 개수
+        slidesPerGroup: 2, //한 번에 슬라이딩될 개수
+        spaceBetween: 40,
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+          dragSize: 500,
+        },
+      });
+    </script>
   </body>
 </html>
