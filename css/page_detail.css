@@ -7,6 +7,16 @@ body {
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
+/* 공통속성 */
+section {
+  width: 100%;
+  height: fit-content;
+}
+.con {
+  width: 1400px;
+  margin: 0 auto;
+}
+/* 헤더 */
 header {
   width: 100%;
   height: 80px;
@@ -122,14 +132,6 @@ h1 {
 }
 
 /* 첫번째 섹션 */
-.sec1 {
-  width: 100%;
-  height: fit-content;
-}
-.sec1 .con {
-  width: 1400px;
-  margin: 0 auto;
-}
 .top_wrap > span {
   display: block;
   font-size: 18px;
@@ -225,9 +227,6 @@ h1 {
   font-size: var(--sec-title-size2);
 }
 /* 두번째 섹션 */
-.sec2 {
-  width: 100%;
-}
 .sec2 > .con {
   width: 1400px;
   margin: 32px auto;
@@ -284,8 +283,6 @@ h1 {
   padding: 0;
 }
 .sec3 > .con {
-  width: 1400px;
-  margin: 0 auto;
   border-bottom: 1px solid #ededed;
 }
 .sec3 > .con > h3 {
@@ -405,20 +402,170 @@ h1 {
 }
 /* 네번째 섹션 */
 .sec4 > .con {
-  width: 1400px;
-  height: auto;
-  margin: 0 auto;
   border-bottom: 1px solid #ededed;
 }
 .sec4 > .con > h3 {
   font-size: var(--sec-title-size2);
   line-height: 40px;
   font-weight: 600;
-  margin: 32px 0;
+  margin: 30px 0;
 }
 .sec4 > .con > p {
   font-size: var(--sec-p-size);
+  font-size: 16px;
   color: #444;
   line-height: 1.2;
+  margin-bottom: 36px;
+}
+/* 다섯번째 섹션 */
+.sec5 > .con {
+  border-bottom: 1px solid #ededed;
+}
+.sec5 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec5 .icon_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sec5 .icon_wrap > span {
+  width: 300px;
+  height: 24px;
+  line-height: 22px;
+  font-size: var(--sec-p-size);
+  margin-right: 50px;
   margin-bottom: 32px;
+}
+.sec5 .icon_wrap i {
+  margin-right: 8px;
+}
+/* 여섯번째 섹션 */
+.sec6 > .con {
+  border-bottom: 1px solid #ededed;
+}
+.sec6 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec6 > .con > ul {
+  list-style: disc;
+  list-style-position: inside;
+  color: var(--main-black-color2);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.sec6 > .con > ul > li:first-child {
+  font-weight: 700;
+}
+/* 일곱, 여덟번째 섹션 */
+.sec7 > .con {
+  border-bottom: 1px solid #ededed;
+}
+.sec7 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec7 > .con > ul {
+  list-style: disc;
+  list-style-position: inside;
+  color: var(--main-black-color2);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.sec8 > .con {
+  border-bottom: 1px solid #ededed;
+}
+.sec8 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec8 > .con > ul {
+  list-style: disc;
+  list-style-position: inside;
+  color: var(--main-black-color2);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+/* 아홉번째 섹션 */
+.sec9 > .con > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.sec9 > .con > .map {
+  width: 100%;
+  height: 700px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.sec9 > .con > p {
+  margin: 32px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* 열번째 섹션 */
+.sec10 > .con > .top_text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+}
+.sec10 > .con > .top_text > h3 {
+  font-size: var(--sec-title-size2);
+  line-height: 40px;
+  font-weight: 600;
+  margin: 32px 0;
+  margin-right: 10px;
+}
+.sec10 > .con > .top_text > p {
+  font-weight: 500px;
+  color: #666;
+}
+.sec10 > .con > .top_text > span {
+  margin-left: auto;
+  font-weight: 500;
+}
+.sec10 .con_wrap > .review {
+  width: 100%;
+  display: flex;
+  padding: 32px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+}
+.sec10 .con_wrap > .review > .left > span {
+  color: #8744ff;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+.sec10 .con_wrap > .review > .left > h3 {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+.sec10 .con_wrap > .review > .left > p {
+  display: block;
+  margin-bottom: 8px;
+}
+.sec10 .con_wrap > .review > .right {
+  width: 900px;
+  box-sizing: border-box;
+  padding: 32px;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  line-height: 1.3;
 }
