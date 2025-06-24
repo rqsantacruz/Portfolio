@@ -180,13 +180,14 @@ h1 {
   justify-content: space-between;
   align-items: end;
 }
-.bottom_wrap > .left > button {
+.bottom_wrap > .left > a {
+  display: block;
   font-weight: 600;
   border: none;
   background-color: transparent;
   font-size: var(--sec-p-size);
   padding: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   cursor: pointer;
 }
 .bottom_wrap > .left > p {
@@ -198,7 +199,7 @@ h1 {
   gap: 20px;
   justify-content: end;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .bottom_wrap > .right > .icon_wrap > button {
   width: 28px;
@@ -241,12 +242,17 @@ h1 {
   border-radius: 15px;
   font-size: 14px;
   align-items: flex-start;
-  padding: 32px;
+  padding: 28px 32px;
+  overflow: hidden;
+}
+.sec2 > .con > .left {
+  position: relative;
 }
 .sec2 > .con > .left > .text_wrap {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-bottom: 28px;
 }
 .sec2 > .con > .left span {
   width: 50px;
@@ -258,23 +264,66 @@ h1 {
   color: #fff;
   margin-right: 12px;
 }
-.sec2 > .con > .left p {
+.sec2 > .con > .left h4 {
   font-weight: 500;
+  color: #666;
 }
-.sec2 > .con > .left button {
+.sec2 > .con > .left a {
   margin-left: auto;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-weight: 700;
 }
-.sec2 > .con > .right button {
+.swiper {
+  height: 122px;
+  overflow: visible;
+}
+.review_conwrap {
+  overflow: visible;
+}
+.review_con {
+  width: 560px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+.sec2 > .con > .left p {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  padding: 0 24px;
+}
+.sec2 > .con > .right a {
   display: block;
+  width: fit-content;
+  line-height: 30px;
   margin-left: auto;
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-weight: 700;
+}
+.sec2 > .con > .right > .icon_wrap {
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.sec2 > .con > .right > .icon_wrap > span {
+  display: block;
+  width: 180px;
+}
+.sec2 > .con > .right > .icon_wrap > span > i {
+  margin-right: 8px;
 }
 /* 세번째 섹션 */
 .sec3 button {
@@ -534,10 +583,54 @@ h1 {
   font-weight: 500px;
   color: #666;
 }
-.sec10 > .con > .top_text > span {
+/* 추천순 버튼 */
+.list_btn {
   margin-left: auto;
-  font-weight: 500;
 }
+.list_btn > button {
+  width: 120px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+  background-color: #ededed;
+  position: relative;
+}
+.list_btn > button > img {
+  width: 16px;
+  height: 16px;
+}
+.list_btn > button > .btn_list {
+  position: absolute;
+  background-color: #ededed;
+  width: 120px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 30px;
+  left: 0;
+  display: none;
+}
+.list_btn > button:hover > .btn_list {
+  display: flex;
+}
+.list_btn > button > .btn_list > li:hover {
+  color: #8744ff;
+}
+.list_btn > button > .btn_list > li:first-child {
+  font-weight: 700;
+}
+/* 리뷰 카드 */
 .sec10 .con_wrap > .review {
   width: 100%;
   display: flex;
@@ -567,6 +660,8 @@ h1 {
   padding: 32px;
   background-color: #f6f6f6;
   border-radius: 15px;
+}
+.sec10 .con_wrap > .review > .right > p {
   line-height: 1.3;
 }
 /* 페이지 번호 */

@@ -298,9 +298,10 @@ h1 {
   overflow: hidden;
 }
 .card > a > img {
+  height: 100%;
   width: 100%;
   position: relative;
-  bottom: 70%;
+  object-fit: cover;
   transition: 0.2s;
 }
 .card:hover > a > img {

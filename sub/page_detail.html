@@ -6,6 +6,11 @@
     <title>사카 호텔 교토 - 트래블러</title>
     <link rel="stylesheet" href="../css/page_detail.css" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/2/xeicon.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -82,15 +87,15 @@
               />
             </div>
             <div class="right">
-              <img src="../img/sub/page_detail/main.webp" alt="mainsub" />
-              <img src="../img/sub/page_detail/main.webp" alt="mainsub" />
-              <img src="../img/sub/page_detail/main.webp" alt="mainsub" />
-              <img src="../img/sub/page_detail/main.webp" alt="mainsub" />
+              <img src="../img/sub/page_detail/pool.webp" alt="mainsub" />
+              <img src="../img/sub/page_detail/table.webp" alt="mainsub" />
+              <img src="../img/sub/page_detail/center.webp" alt="mainsub" />
+              <img src="../img/sub/page_detail/dining.webp" alt="mainsub" />
             </div>
           </div>
           <div class="bottom_wrap">
             <div class="left">
-              <button type="button">위치정보 ></button>
+              <a href="#sec9">위치정보 ></a>
               <p>
                 4 Chome-200 Kiyomizu, Higashiyama Ward, Kyoto, Japan, 산넨자카
                 니넨자카, 교토, 일본, 605-0862
@@ -119,12 +124,43 @@
           <div class="left">
             <div class="text_wrap">
               <span>★ 9.2</span>
-              <p>1,549명 평가</p>
-              <button type="button">전체보기 ></button>
+              <h4>1,549명 평가</h4>
+              <a href="#sec10">전체보기 ></a>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="review_conwrap swiper-wrapper">
+                <div class="review_con swiper-slide">
+                  <p>
+                    교토역에선 조금 멀지만 스텝분들 친절하고 친절하고 깨끗하고
+                    조용해서 좋았어요.<br />
+                    웰컴음료 제공도 세심하게 느껴졌습니다. <br />
+                    근처에 동본원사 서본원사도 꼭 들려보세요.
+                  </p>
+                </div>
+                <div class="review_con swiper-slide">
+                  <p>
+                    교토역에선 조금 멀지만 스텝분들 친절하고 친절하고 깨끗하고
+                    조용해서 좋았어요.<br />
+                    웰컴음료 제공도 세심하게 느껴졌습니다. <br />
+                    근처에 동본원사 서본원사도 꼭 들려보세요. <br />
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="right">
-            <button>서비스 및 편의시설 ></button>
+            <a href="#sec4">서비스 및 편의시설 ></a>
+            <div class="icon_wrap">
+              <span><i class="xi-wifi"></i>무료 Wi-Fi (모든 객실)</span>
+              <span><i class="xi-wifi"></i>무료 Wi-Fi (공용 구역)</span>
+              <span><i class="xi-key"></i>24시간 프런트 데스크</span>
+              <span><i class="xi-restaurant"></i>레스토랑</span>
+              <span><i class="xi-ban"></i>금연 객실</span>
+              <span><i class="xi-tv"></i>TV</span>
+              <span><i class="xi-thermometer"></i>에어컨</span>
+              <span><i class="xi-thermometer"></i>난방</span>
+              <span><i class="xi-park"></i>숙소 내 주차장</span>
+            </div>
           </div>
         </div>
       </section>
@@ -264,7 +300,7 @@
         </div>
       </section>
       <!-- 네번째 섹션 -->
-      <section class="sec4">
+      <section class="sec4" id="sec4">
         <div class="con">
           <h3>숙소 소개</h3>
           <p>
@@ -290,16 +326,19 @@
         <div class="con">
           <h3>서비스 및 부대시설</h3>
           <div class="icon_wrap">
-            <span><i class="xi-car"></i>무료 주차</span>
-            <span><i class="xi-car"></i>숙소 내 주차장</span>
+            <span><i class="xi-park"></i>무료 주차</span>
+            <span><i class="xi-park"></i>숙소 내 주차장</span>
             <span><i class="xi-wifi"></i>무료 Wi-Fi (모든 객실)</span>
             <span><i class="xi-wifi"></i>무료 Wi-Fi (공용 구역)</span>
             <span><i class="xi-restaurant"></i>레스토랑</span>
             <span><i class="xi-restaurant"></i>룸서비스</span>
             <span><i class="xi-key"></i>24시간 프런트 데스크</span>
-            <span><i class="xi-key"></i>금연 객실</span>
+            <span><i class="xi-ban"></i>금연 객실</span>
             <span><i class="xi-tv"></i>TV</span>
+            <span><i class="xi-thermometer"></i>에어컨</span>
+            <span><i class="xi-thermometer"></i>난방</span>
             <span><i class="xi-wheelchair"></i>휠체어 접근 가능</span>
+            <span><i class="xi-fitness-center"></i>피트니스 센터</span>
           </div>
         </div>
       </section>
@@ -350,7 +389,7 @@
         </div>
       </section>
       <!-- 아홉번째 섹션 -->
-      <section class="sec9">
+      <section class="sec9" id="sec9">
         <div class="con">
           <h3>위치</h3>
           <div class="map">
@@ -371,12 +410,26 @@
         </div>
       </section>
       <!-- 열번째 섹션 -->
-      <section class="sec10">
+      <section class="sec10" id="sec10">
         <div class="con">
           <div class="top_text">
             <h3>이용자 리뷰</h3>
             <p>1,549명 평가 ・ 425개 리뷰</p>
-            <span>추천순</span>
+            <!-- 추천순 -->
+            <div class="list_btn">
+              <button>
+                추천순
+                <img src="../img/sub/search/down_arrow.png" alt="down_arrow" />
+                <ul class="btn_list">
+                  <li>추천순</li>
+                  <li>평점높은순</li>
+                  <li>리뷰많은순</li>
+                  <li>낮은가격순</li>
+                  <li>높은가격순</li>
+                  <li>거리순</li>
+                </ul>
+              </button>
+            </div>
           </div>
           <div class="con_wrap">
             <div class="review">
@@ -387,10 +440,12 @@
                 <p>2인/1객실</p>
               </div>
               <div class="right">
-                교토역에선 조금 멀지만 스텝분들 친절하고 친절하고 깨끗하고
-                조용해서 좋았어요.<br />
-                웰컴음료 제공도 세심하게 느껴졌습니다. <br />
-                근처에 동본원사 서본원사도 꼭 들려보세요
+                <p>
+                  교토역에선 조금 멀지만 스텝분들 친절하고 친절하고 깨끗하고
+                  조용해서 좋았어요.<br />
+                  웰컴음료 제공도 세심하게 느껴졌습니다. <br />
+                  근처에 동본원사 서본원사도 꼭 들려보세요
+                </p>
               </div>
             </div>
             <div class="review">
@@ -517,5 +572,13 @@
         </div>
       </div>
     </footer>
+    <!-- js -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        centeredSlides: true,
+      });
+    </script>
   </body>
 </html>
