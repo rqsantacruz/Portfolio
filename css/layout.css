@@ -160,14 +160,16 @@ h1 {
   font-weight: 500;
   cursor: pointer;
 }
-.btn_wrap > button:first-child {
-  background-color: #fff;
-  color: var(--main-color);
-}
-.btn_wrap > button:last-child {
+
+.btn_wrap > button {
   background-color: #fff;
   opacity: 0.8;
   color: #666;
+}
+.btn_wrap > .active {
+  background-color: #fff;
+  color: var(--main-color);
+  opacity: 1;
 }
 /* 날짜 인원 */
 .info_wrap {
@@ -178,12 +180,13 @@ h1 {
   gap: 24px;
   padding: 8px 24px;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 /* 날짜 */
 .date_picker {
   width: 230px;
   height: 30px;
-  border-bottom: 1px solid #a6a6a6;
 }
 .date_picker > input {
   width: 100%;
@@ -193,20 +196,144 @@ h1 {
   text-align: center;
   outline: none;
   cursor: pointer;
-  color: var(--main-black-color);
-}
-.count {
-  width: 230px;
-  height: 30px;
   border-bottom: 1px solid #a6a6a6;
-  text-align: center;
-  line-height: 30px;
+  color: var(--main-black-color);
+  padding: 0;
 }
-.count > input {
-  width: 24px;
+.date_picker > input:focus {
+  border-color: var(--main-black-color);
+}
+.litepicker select {
   border: none;
-  text-align: center;
+}
+/* 인원, 객실 */
+/* count_picker_wrap: 전체 감싸는 div */
+.count_picker_wrap {
+  height: 30px;
+  position: relative;
+  width: fit-content;
+  /* 기존 .count div에 적용된 스타일을 여기에 옮겨올 수 있습니다. */
+}
+
+/* count_picker: 인원/객실 표시 input 부분 */
+.count_picker {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 230px;
+  cursor: pointer;
+}
+
+.count_picker input {
+  width: 100%; /* 아이콘 공간 확보 */
+  padding: 6px 15px;
+  border: none;
+  border-bottom: 1px solid #a6a6a6; /* 날짜 입력과 동일한 스타일 */
+  font-size: 14px;
+  color: var(--main-black-color);
   outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+}
+.count_picker input:focus {
+  border-bottom-color: var(--main-black-color);
+}
+/* count_dropdown_panel: 드롭다운으로 뜨는 패널 */
+.count_dropdown_panel {
+  position: absolute;
+  top: calc(100% + 10px); /* input 아래 10px 간격 */
+  left: 0;
+  width: 100%; /* 너비를 input과 맞춤 */
+  min-width: 250px; /* 최소 너비 */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 20; /* 다른 요소 위에 표시 */
+  display: none; /* 기본적으로 숨김 */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.count_dropdown_panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.counter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+}
+
+.counter-item:last-child {
+  margin-bottom: 20px;
+}
+
+.counter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-buttons button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: #fff;
+  color: var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s linear, color 0.2s ease;
+}
+
+.counter-buttons button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.counter-buttons button:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.counter-buttons .count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+.apply-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.apply-button:hover {
+  background-color: #6836c5;
 }
 /* 검색창 */
 .search_bar {
@@ -227,6 +354,9 @@ h1 {
   border-bottom: 1px solid #a6a6a6;
   text-align: center;
   outline: none;
+}
+.search_bar > input:focus {
+  border-color: var(--main-black-color);
 }
 .search_bar > a {
   width: 38px;
@@ -448,11 +578,9 @@ h1 {
   margin: 0 auto;
 }
 .rec_wrap {
-  width: 100%;
-  height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 .rec_wrap a {
   color: #fff;
@@ -460,7 +588,7 @@ h1 {
   font-weight: 500;
 }
 .sec4 .rec_card {
-  width: 400px;
+  /* width: 400px; */
   height: 400px;
   background: linear-gradient(
       0deg,
@@ -478,7 +606,7 @@ h1 {
   height: 100%;
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.45) 15%,
+    rgba(0, 0, 0, 0.2) 15%,
     rgba(255, 255, 255, 0) 100%
   );
   background-size: cover;
@@ -495,18 +623,6 @@ h1 {
   line-height: 32px;
   margin-bottom: 44px;
   font-weight: 400;
-}
-.sec4 .swiper-slide-active {
-  transform: scale(1.2);
-  transition: 0.2s;
-}
-.swiper4-prev {
-  margin-left: 130px;
-  --swiper-theme-color: #8744ff;
-}
-.swiper4-next {
-  margin-right: 130px;
-  --swiper-theme-color: #8744ff;
 }
 /* 다섯번째 섹션 */
 .sec5 {

@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>트래블러 - 검색'일본'</title>
     <link rel="stylesheet" href="../css/search.css" />
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+      integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Litepicker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <!-- Litepicker JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
   </head>
   <body>
     <header>
@@ -37,6 +51,7 @@
               </li>
             </ul>
           </button>
+          <!-- 로고 -->
           <h1><a href="/">Traveler</a></h1>
         </div>
         <!-- 검색 -->
@@ -44,18 +59,29 @@
           <div class="search">
             <input type="text" />
           </div>
-          <div class="date">
-            <input type="date" />
+          <!-- 날짜 -->
+          <div class="date_picker">
+            <input
+              type="text"
+              id="dateRange"
+              readonly
+              placeholder="체크인 - 체크아웃 날짜"
+            />
           </div>
-          <div class="count">
-            <label>인원</label>
-            <input type="text" />
-            <label>명</label>
-            <input type="text" />
-            <label>객실</label>
+          <!-- 인원, 객실 -->
+          <div class="count_picker_wrap">
+            <div class="count_picker" id="guestRoomCountTrigger">
+              <input
+                type="text"
+                id="guestRoomCountDisplay"
+                readonly
+                placeholder="인원/객실 선택"
+              />
+            </div>
           </div>
         </div>
-        <!-- 로고 -->
+      </div>
+        <!-- 로그인 -->
         <div class="head_right">
           <a href="./login.html"
             ><img src="../img/header_img/account.png" alt="로그인" />
@@ -516,5 +542,42 @@
         </div>
       </div>
     </footer>
+    <!-- js -->
+    <!-- 체크인 - 체크아웃 -->
+    <script>
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const picker = new Litepicker({
+        element: document.getElementById('dateRange'),
+        singleMode: false,
+        allowRepick: false,
+        minDays: 2,
+        format: 'YYYY-MM-DD',
+        numberOfMonths: 2,
+        numberOfColumns: 2,
+        lang: 'ko',
+        minDate: today,
+        tooltipText: { one: '박', other: '박' }, // 기본 비워두기
+        tooltipNumber: (totalDays) => {
+          // totalDays가 없거나 (선택 전),
+          // totalDays가 1인 경우 (체크인 날짜만 선택되었거나 당일 체크인/체크아웃)
+          if (!totalDays || totalDays < 2) {
+            return ''; // 툴팁 숨김
+          }
+
+          // totalDays가 2 이상일 때 (체크인/체크아웃 날짜가 모두 선택되어 1박 이상 확정된 상태)
+          const nights = totalDays - 1;
+          return `${nights}박`; // 예: 1박, 2박 등 표시
+        },
+        dropdowns: {
+          minYear: 2025,
+          maxYear: 2026,
+          months: true,
+          years: true,
+        },
+      });
+    </script>
+    <!-- 인원, 객실 -->
+     
   </body>
 </html>

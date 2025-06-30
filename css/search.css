@@ -95,23 +95,33 @@ h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  align-items: center;
 }
 .info_wrap input {
   outline: none;
   border: none;
-  background-color: #ededed;
   width: 28px;
   height: 28px;
   box-sizing: border-box;
   padding: 0 10px;
-  border-radius: 5px;
+  border-bottom: 1px solid #a6a6a6;
 }
 .info_wrap input:focus {
-  background-color: #d9d9d9;
+  border-color: var(--main-black-color);
 }
 .info_wrap input:first-child {
   width: fit-content;
 }
+/* 날짜 */
+#dateRange {
+  text-align: center;
+  cursor: pointer;
+}
+/* 인원, 객실 */
+.count_picker input {
+  text-align: center;
+}
+/* 로그인 */
 .head_right > a {
   display: flex;
   align-items: center;
@@ -192,6 +202,25 @@ h3 {
 .check_sec {
   padding: 28px 0;
   border-bottom: 1px solid #ededed;
+}
+.check_wrap label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.check_sec input[type='checkbox'] {
+  appearance: none; /* 기본(네이티브) 모양을 제거 */
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px var(--main-color) inset;
+}
+.check_sec input[type='checkbox']:checked {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
 }
 .check_sec > h3 {
   margin-bottom: 28px;

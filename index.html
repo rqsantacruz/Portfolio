@@ -15,7 +15,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
     />
-
     <!-- Litepicker JS -->
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
     <!-- jquery -->
@@ -89,31 +88,68 @@
         <div class="search_wrap">
           <!-- 버튼 -->
           <div class="btn_wrap">
-            <button>해외 숙소</button>
-            <button>국내 숙소</button>
+            <button type="button" id="global" class="active">해외 숙소</button>
+            <button type="button" id="local">국내 숙소</button>
           </div>
           <!-- 날짜 인원 -->
           <div class="info_wrap">
+            <!-- 날짜 -->
             <div class="date_picker">
               <input
                 type="text"
                 id="dateRange"
                 readonly
-                placeholder="날짜를 선택하세요"
+                placeholder="체크인 - 체크아웃 날짜 선택"
               />
             </div>
-            <div class="count">
-              <label>인원</label>
-              <input type="text" />
-              <label>명</label>
-              <input type="text" />
-              <label>객실</label>
+            <!-- 인원, 객실 -->
+            <div class="count_picker_wrap">
+              <div class="count_picker" id="guestRoomCountTrigger">
+                <input
+                  type="text"
+                  id="guestRoomCountDisplay"
+                  readonly
+                  placeholder="인원/객실 선택"
+                />
+              </div>
+              <!-- 드롭다운 -->
+              <div class="count_dropdown_panel" id="guestRoomCountPanel">
+                <div class="counter-item">
+                  <span>성인</span>
+                  <div class="counter-buttons">
+                    <button class="minus" data-type="adult">-</button>
+                    <span class="count" id="adultCount">1</span>
+                    <button class="plus" data-type="adult">+</button>
+                  </div>
+                </div>
+                <div class="counter-item">
+                  <span>아동</span>
+                  <div class="counter-buttons">
+                    <button class="minus" data-type="child">-</button>
+                    <span class="count" id="childCount">0</span>
+                    <button class="plus" data-type="child">+</button>
+                  </div>
+                </div>
+                <div class="counter-item">
+                  <span>객실</span>
+                  <div class="counter-buttons">
+                    <button class="minus" data-type="room">-</button>
+                    <span class="count" id="roomCount">1</span>
+                    <button class="plus" data-type="room">+</button>
+                  </div>
+                </div>
+                <button class="apply-button">확인</button>
+              </div>
             </div>
           </div>
           <!-- 검색창 -->
           <div class="search_bar">
-            <input type="search" placeholder="여행지/숙소명을 검색하세요." />
-            <a href="./sub/search.html"
+            <input
+              type="search"
+              placeholder="여행지/숙소명을 검색하세요."
+              id="main_search"
+            />
+            <a href="./sub/search.html" id="search_btn"
               ><img src="./img/main/ico_search.png" alt="검색"
             /></a>
           </div>
@@ -393,10 +429,8 @@
       <section class="sec4">
         <h3>1인특가 추천 여행지</h3>
         <div class="con">
-          <div class="swiper-button-prev swiper4-prev"></div>
-          <div class="swiper-button-next swiper4-next"></div>
           <div class="sec4swiper swiper">
-            <div class="rec_wrap swiper-wrapper">
+            <div class="rec_wrap swiper-wrapper" id="card_wrap">
               <!-- 카드 -->
               <div class="rec_card swiper-slide">
                 <a href="#">중국</a>
@@ -863,17 +897,38 @@
     </footer>
     <!-- js -->
     <!-- 첫번째섹션 -->
+    <!-- 숙소 버튼 -->
     <script>
+      $(function () {
+        $('#local').on('click', function () {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
+            $('#global').removeClass('active');
+          }
+        });
+
+        $('#global').on('click', function () {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
+            $('#local').removeClass('active');
+          }
+        });
+      });
+    </script>
+    <!-- 체크인 - 체크아웃 -->
+    <script>
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
       const picker = new Litepicker({
         element: document.getElementById('dateRange'),
         singleMode: false,
         allowRepick: false,
         minDays: 2,
         format: 'YYYY-MM-DD',
-        numberOfMonths: 1,
-        numberOfColumns: 1,
+        numberOfMonths: 2,
+        numberOfColumns: 2,
         lang: 'ko',
-        minDate: new Date(),
+        minDate: today,
         tooltipText: { one: '박', other: '박' }, // 기본 비워두기
         tooltipNumber: (totalDays) => {
           // totalDays가 없거나 (선택 전),
@@ -892,6 +947,117 @@
           months: true,
           years: true,
         },
+      });
+    </script>
+    <!-- 인원, 객실 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const guestRoomCountTrigger = document.getElementById(
+          'guestRoomCountTrigger'
+        ); // 변경된 ID
+        const guestRoomCountPanel = document.getElementById(
+          'guestRoomCountPanel'
+        ); // 변경된 ID
+        const guestRoomCountDisplay = document.getElementById(
+          'guestRoomCountDisplay'
+        ); // 변경된 ID
+        const applyButton = guestRoomCountPanel.querySelector('.apply-button');
+
+        let adultCount = 1;
+        let childCount = 0;
+        let roomCount = 1;
+
+        // 초기값 설정 및 표시
+        function updateDisplay() {
+          const totalGuests = adultCount + childCount;
+          guestRoomCountDisplay.value = `인원 ${totalGuests}명, 객실 ${roomCount}개`; // 표시 형식 변경
+          document.getElementById('adultCount').textContent = adultCount;
+          document.getElementById('childCount').textContent = childCount;
+          document.getElementById('roomCount').textContent = roomCount;
+
+          // 버튼 활성화/비활성화 (최소/최대 값 제한)
+          guestRoomCountPanel.querySelectorAll('.minus').forEach((button) => {
+            const type = button.dataset.type;
+            if (type === 'adult' && adultCount <= 1) button.disabled = true;
+            else if (type === 'child' && childCount <= 0)
+              button.disabled = true;
+            else if (type === 'room' && roomCount <= 1) button.disabled = true;
+            else button.disabled = false;
+          });
+
+          guestRoomCountPanel.querySelectorAll('.plus').forEach((button) => {
+            const type = button.dataset.type;
+            // 최대 인원/객실 수 제한 (원하는 값으로 조절)
+            if (type === 'adult' && adultCount >= 10) button.disabled = true;
+            else if (type === 'child' && childCount >= 5)
+              button.disabled = true;
+            else if (type === 'room' && roomCount >= 5) button.disabled = true;
+            else button.disabled = false;
+          });
+        }
+
+        // 드롭다운 토글
+        guestRoomCountTrigger.addEventListener('click', (event) => {
+          // input 필드를 클릭했을 때만 패널을 열도록
+          if (
+            event.target.tagName === 'INPUT' ||
+            event.target.tagName === 'LABEL' ||
+            event.target.classList.contains('person-icon')
+          ) {
+            guestRoomCountPanel.classList.toggle('active');
+          }
+        });
+
+        // 증감 버튼 클릭 이벤트
+        guestRoomCountPanel.addEventListener('click', (event) => {
+          const target = event.target;
+          if (
+            target.tagName === 'BUTTON' &&
+            (target.classList.contains('minus') ||
+              target.classList.contains('plus'))
+          ) {
+            const type = target.dataset.type;
+            if (target.classList.contains('minus')) {
+              if (type === 'adult' && adultCount > 1) adultCount--;
+              else if (type === 'child' && childCount > 0) childCount--;
+              else if (type === 'room' && roomCount > 1) roomCount--;
+            } else {
+              // plus
+              if (type === 'adult' && adultCount < 10) adultCount++;
+              else if (type === 'child' && childCount < 5) childCount++;
+              else if (type === 'room' && roomCount < 5) roomCount++;
+            }
+            updateDisplay();
+          } else if (target.classList.contains('apply-button')) {
+            guestRoomCountPanel.classList.remove('active'); // "적용" 버튼 클릭 시 패널 닫기
+          }
+        });
+
+        // 드롭다운 외부 클릭 시 닫기
+        document.addEventListener('click', (event) => {
+          if (
+            !guestRoomCountTrigger.contains(event.target) &&
+            !guestRoomCountPanel.contains(event.target)
+          ) {
+            guestRoomCountPanel.classList.remove('active');
+          }
+        });
+
+        updateDisplay(); // 페이지 로드 시 초기값 설정
+      });
+    </script>
+    <!-- 검색창 -->
+    <script>
+      let mainSearch = $('#main_search');
+      let searchBtn = $('#search_btn');
+      $(function () {
+        mainSearch.on('keydown', function (event) {
+          if (event.keyCode === 13) {
+            let searchText = mainSearch.val();
+
+            window.location.href = searchBtn.attr('href');
+          }
+        });
       });
     </script>
     <!-- 두번째 섹션 -->
@@ -941,14 +1107,9 @@
       var swiper = new Swiper('.sec4swiper', {
         effect: 'slide', // 기본 슬라이드 효과 (cube, coverflow 등 다른 효과도 가능)
         centeredSlides: true, // 활성 슬라이드를 중앙에 배치
-        slidesPerView: 'auto', // 슬라이드 너비를 자동으로 (CSS에서 width 제어)
-        spaceBetween: 0, // 슬라이드 사이 간격
-        slidesPerGroup: 1, //한 번에 슬라이딩될 개수
+        slidesPerView: 3, // 슬라이드 너비를 자동으로 (CSS에서 width 제어)
+        spaceBetween: 60, // 슬라이드 사이 간격
         loop: true,
-        navigation: {
-          nextEl: '.swiper4-next',
-          prevEl: '.swiper4-prev',
-        },
       });
     </script>
     <!-- 여섯번째 섹션 -->
