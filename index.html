@@ -61,7 +61,7 @@
         </div>
         <nav id="gnb">
           <ul>
-            <li><a href="#">당일특가</a></li>
+            <li><a href="#">이벤트</a></li>
             <li><a href="./sub/pick_shuttle.html">픽업/셔틀안내</a></li>
             <li><a href="./sub/activity.html">액티비티</a></li>
             <li><a href="./sub/tour_pass.html">투어/패스</a></li>
@@ -462,6 +462,10 @@
                   </p>
                   일본
                 </a>
+              </div>
+              <!-- 카드 -->
+              <div class="rec_card swiper-slide">
+                <a href="#">싱가포르</a>
               </div>
               <!-- 카드 -->
               <div class="rec_card swiper-slide">
@@ -1107,9 +1111,17 @@
       var swiper = new Swiper('.sec4swiper', {
         effect: 'slide', // 기본 슬라이드 효과 (cube, coverflow 등 다른 효과도 가능)
         centeredSlides: true, // 활성 슬라이드를 중앙에 배치
-        slidesPerView: 3, // 슬라이드 너비를 자동으로 (CSS에서 width 제어)
+        slidesPerView: 'auto', // 슬라이드 너비를 자동으로 (CSS에서 width 제어)
         spaceBetween: 60, // 슬라이드 사이 간격
         loop: true,
+
+        // coverflowEffect: {
+        //   rotate: 50,
+        //   stretch: 0,
+        //   depth: 100,
+        //   modifier: 1,
+        //   slideShadows: true,
+        // },
       });
     </script>
     <!-- 여섯번째 섹션 -->

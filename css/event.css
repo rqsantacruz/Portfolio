@@ -1,0 +1,309 @@
+@import url(./reset.css);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  overflow-x: hidden;
+}
+/* 공통 스타일 */
+section {
+  width: 100%;
+  height: fit-content;
+}
+.con {
+  width: 1000px;
+  height: fit-content;
+  margin: 0 auto;
+  box-sizing: ;
+}
+p {
+  font-size: var(--sec-title-size);
+  font-weight: bold;
+}
+h3 {
+  font-size: 52px;
+  font-weight: bold;
+}
+h4 {
+  font-size: 36px;
+  font-weight: bold;
+}
+/* 헤더 */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 999;
+}
+.head_wrap {
+  width: calc(100% - 160px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head_left {
+  display: flex;
+  gap: 140px;
+}
+.head_left > button {
+  width: 48px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.head_left > button:hover .all_menu {
+  display: flex;
+}
+.all_menu {
+  display: none;
+  flex-direction: column;
+  width: 240px;
+  height: fit-content;
+  background-color: #fff;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  text-align: start;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding: 12px 12px 0px 12px;
+  border-radius: 0 0 5px 0;
+}
+
+.all_menu > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 22px 8px;
+  font-size: 14px;
+  border-top: 1px solid #ededed;
+}
+.all_menu > li:hover > a {
+  color: #8744ff;
+}
+.all_menu > .login {
+  display: block;
+  width: 216px;
+  height: 40px;
+  background-color: #8744ff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 80px;
+}
+#gnb {
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -332px;
+}
+#gnb > ul {
+  display: flex;
+  gap: 60px;
+  font-size: var(--sec-p-size);
+}
+#gnb > ul a {
+  display: block;
+  height: 80px;
+  padding: 0 24px;
+  transition: 0.2s;
+}
+#gnb > ul a:hover {
+  color: var(--main-color);
+}
+.head_right > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: var(--sec-p-size);
+  padding: 16px 24px;
+}
+/* 첫번째 섹션 */
+.sec1 {
+  width: 100%;
+  height: fit-content;
+}
+.sec1 .con {
+  position: relative;
+}
+.sec1 .con .img_window {
+  height: 1400px;
+  overflow: hidden;
+}
+.sec1 .con img {
+  width: 100%;
+  object-fit: contain;
+}
+.main_text {
+  width: fit-content;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main_text h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.main_text h2 {
+  font-size: 120px;
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 128px;
+  color: #fff;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+/* 두번째 섹션 */
+.sec2 {
+  padding: 0 40px;
+}
+.sec2 > .con > h4 {
+  text-align: center;
+}
+.sec2_text {
+  text-align: center;
+}
+.sec2_text > p {
+  line-height: 44px;
+  margin-top: 80px;
+}
+.sec2_text > span {
+  display: block;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 40px;
+  line-height: 64px;
+}
+.sec2_text > h3 {
+  margin-bottom: 40px;
+}
+.sec2_text > h4 {
+  display: block;
+}
+.sec2 .content {
+  width: 1000px;
+  height: fit-content;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.sec2 .card {
+  width: 440px;
+  height: 644px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 28px;
+  box-shadow: 0px 2px 9px -3px rgba(0, 0, 0, 0.2);
+}
+.sec2 .card_window {
+  width: 384px;
+  height: 336px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.sec2 .card_window img {
+  height: 100%;
+  object-fit: contain;
+}
+.sec2 .card_name {
+  margin-top: 12px;
+}
+.sec2 .card_name span {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 20px;
+}
+.sec2 .card_name h4 {
+  font-size: var(--sec-title-size2);
+  font-weight: 500;
+  margin-bottom: 48px;
+  line-height: 36px;
+}
+.sec2 .card_price {
+  text-align: end;
+}
+.sec2 .card_price p {
+  font-size: var(--sec-p-size);
+  font-weight: 500;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.sec2 .card_price p span {
+  font-size: 14px;
+}
+.sec2 .card_price h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.sec2 .card a {
+  display: block;
+  width: 170px;
+  height: 48px;
+  text-align: center;
+  background-color: #ccc;
+  line-height: 48px;
+  font-size: var(--sec-p-size);
+  color: #777;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: auto;
+}
+.sec2 .active_card a {
+  display: block;
+  width: 170px;
+  height: 48px;
+  text-align: center;
+  background-color: #8744ff;
+  line-height: 48px;
+  font-size: var(--sec-p-size);
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: auto;
+  font-weight: 400;
+}
+.sec2 > .con > a {
+  display: block;
+  width: 920px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #8744ff;
+  font-size: var(--sec-p-size);
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
