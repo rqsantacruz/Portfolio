@@ -1,4 +1,4 @@
-@import url(./reset.css);
+@import url(../reset.css);
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 body {
@@ -17,7 +17,6 @@ section {
   width: 1000px;
   height: fit-content;
   margin: 0 auto;
-  box-sizing: ;
 }
 p {
   font-size: var(--sec-title-size);
@@ -37,6 +36,7 @@ header {
   height: 80px;
   background-color: #fff;
   z-index: 999;
+  border-bottom: 1px solid #ededed;
 }
 .head_wrap {
   width: calc(100% - 160px);
@@ -151,6 +151,22 @@ h1 {
 .sec1 .con {
   position: relative;
 }
+.sec1 .con::before {
+  content: ''; /* 가상 요소 생성 */
+  position: absolute; /* .con을 기준으로 배치 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 검정색에서 투명으로 가는 선형 그라데이션 */
+  background: RGBA(0, 0, 0, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 0) 30%
+  );
+  z-index: 1; /* 텍스트보다 아래에, 이미지보다 위에 오도록 설정 */
+}
 .sec1 .con .img_window {
   height: 1400px;
   overflow: hidden;
@@ -165,6 +181,7 @@ h1 {
   top: 200px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 .main_text h3 {
   font-size: 40px;
@@ -182,9 +199,6 @@ h1 {
   text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 /* 두번째 섹션 */
-.sec2 {
-  padding: 0 40px;
-}
 .sec2 > .con > h4 {
   text-align: center;
 }
@@ -306,4 +320,154 @@ h1 {
   color: #fff;
   border-radius: 10px;
   margin-bottom: 40px;
+}
+/* 세번째 섹션 */
+.sec3 > .con {
+  box-sizing: border-box;
+  padding: 40px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sec3 > .con > h4 {
+  font-size: 14px;
+}
+.sec3 > .con li {
+  font-size: 14px;
+  font-weight: 300;
+  list-style: disc;
+  list-style-position: inside;
+  line-height: 24px;
+}
+/* 푸터 */
+footer {
+  width: 100%;
+  font-size: 14px;
+  color: #999;
+}
+/* footer top */
+.foot_top {
+  width: 1400px;
+  height: 60px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  margin: 0 auto;
+}
+.foot_top > ul {
+  display: flex;
+  gap: 50px;
+  line-height: 60px;
+  font-weight: 500;
+}
+.foot_top > ul > li > a {
+  color: #999;
+}
+.foot_top > ul > li:nth-child(2) > a {
+  color: #333;
+}
+/* footer bottom */
+.foot_bottom {
+  width: 1400px;
+  padding: 50px 0;
+  margin: 0 auto;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.foot_bottom .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.foot_bottom .left > p {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.center {
+  width: fit-content;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.center > .center_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.center > .center_top > h3 {
+  color: #404040;
+  font-size: var(--sec-p-size);
+  font-weight: 500;
+}
+.center > .center_top > h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+.center > p {
+  color: #808080;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.center > a {
+  display: block;
+  color: #404040;
+  font-size: var(--sec-p-size);
+  font-weight: 600;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+}
+.foot_bottom .right {
+  width: fit-content;
+  height: 166px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+}
+.foot_bottom .right p {
+  font-weight: 400;
+}
+.foot_bottom .right > h3 {
+  font-size: var(--sec-p-size);
+  color: #3e3e3e;
+  font-weight: 500;
+  line-height: 30px;
+}
+.num_wrap {
+  display: flex;
+  width: 100%;
+}
+.num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 20px;
+}
+.num:first-child {
+  border-right: 1px solid #bfbfbf;
+}
+.num_wrap p {
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
+}
+.num_wrap h3 {
+  color: #323232;
+  font-size: var(--sec-p-size);
+  line-height: 24px;
+  font-weight: 600;
 }

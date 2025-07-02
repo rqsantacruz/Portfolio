@@ -628,6 +628,7 @@ h1 {
 .sec4 .rec_card.swiper-slide-active {
   width: 520px;
   height: 520px;
+  /* transition: 0.5s; */
 }
 /* 다섯번째 섹션 */
 .sec5 {

@@ -1,4 +1,4 @@
-@import url(./reset.css);
+@import url(../reset.css);
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 body {
@@ -12,6 +12,7 @@ header {
   height: 80px;
   background-color: #fff;
   z-index: 999;
+  border-bottom: 1px solid #ededed;
 }
 .head_wrap {
   width: calc(100% - 160px);
@@ -45,21 +46,19 @@ header {
   height: fit-content;
   background-color: #fff;
   position: absolute;
-  top: 80px;
+  top: 81px;
   left: 0;
   text-align: start;
   font-size: 18px;
   box-sizing: border-box;
-  padding: 12px 12px 0px 12px;
-  border-radius: 0 0 5px 0;
+  padding: 20px 12px;
 }
 
 .all_menu > li > a {
   display: block;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  padding: 22px 8px;
+  padding: 20px 0;
   font-size: 14px;
   border-top: 1px solid #ededed;
 }
@@ -88,31 +87,41 @@ h1 {
   font-size: 22px;
   line-height: 80px;
 }
-#gnb {
-  height: 80px;
-  line-height: 80px;
-  margin: 0 auto;
+.info_wrap {
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  gap: 8px;
   position: absolute;
   left: 50%;
-  margin-left: -332px;
+  transform: translateX(-50%);
+  align-items: center;
 }
-#gnb > ul {
-  display: flex;
-  gap: 60px;
-  font-size: var(--sec-p-size);
+.info_wrap input {
+  outline: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-bottom: 1px solid #a6a6a6;
 }
-#gnb > ul a {
-  display: block;
-  height: 80px;
-  padding: 0 24px;
-  transition: 0.2s;
+.info_wrap input:focus {
+  border-color: var(--main-black-color);
 }
-#gnb > ul > li:nth-child(3) > a {
-  color: #8744ff;
+.info_wrap input:first-child {
+  width: fit-content;
 }
-#gnb > ul a:hover {
-  color: var(--main-color);
+/* 날짜 */
+#dateRange {
+  text-align: center;
+  cursor: pointer;
 }
+/* 인원, 객실 */
+.count_picker input {
+  text-align: center;
+}
+/* 로그인 */
 .head_right > a {
   display: flex;
   align-items: center;
@@ -121,117 +130,136 @@ h1 {
   font-size: var(--sec-p-size);
   padding: 16px 24px;
 }
-/* 메인이미지 */
-.sec1 {
+/* 섹션 */
+main {
   width: 100%;
-  height: 600px;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/sub/activity/activity_main.jpg) no-repeat;
-  background-size: cover;
-  background-position: center left;
-  box-sizing: border-box;
-  padding: 95px 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
+  height: auto;
 }
-.sec1 > h2 {
-  font-size: 36px;
-  line-height: 48px;
-  font-weight: 600;
-  line-height: 60px;
-  margin-bottom: 60px;
-}
-.sec1 > p {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 48px;
-}
-/* 컨텐츠 */
 .con {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+/* 왼쪽섹션 */
+.left_con {
+  width: 300px;
+  height: fit-content;
+}
+/* 지도 */
+.map_wrap {
   width: 100%;
   height: fit-content;
-  padding-top: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
 }
-.con_wrap {
-  width: 1400px;
+.map_wrap > a {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background: url(../../img/sub/search/map.PNG) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.map_wrap > a > span {
+  font-size: 14px;
+  color: #8744ff;
+  display: block;
+  width: 110px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* 가격 범위 */
+.bar_wrap {
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.bar_wrap > label > input {
+  width: 300px;
+  height: 2px;
+  margin: 16px 0;
+}
+.bar_wrap .price {
+  font-size: 14px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  width: 125px;
 }
-.left_con {
-  width: 300px;
-  height: 100%;
-}
-.map_view {
-  padding-bottom: 28px;
+/* 숙소 종류 */
+.check_sec {
+  padding: 28px 0;
   border-bottom: 1px solid #ededed;
 }
-.map_view > h3 {
-  font-size: 18px;
-  font-weight: 600;
+.check_wrap label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.check_sec input[type='checkbox'] {
+  appearance: none; /* 기본(네이티브) 모양을 제거 */
+  box-sizing: border-box;
+  background-clip: content-box;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1px var(--main-color) inset;
+}
+.check_sec input[type='checkbox']:checked {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+.check_sec > h3 {
   margin-bottom: 28px;
 }
-
-.map_view button {
-  width: fit-content;
-  height: fit-content;
-  color: #8744ff;
-  border-radius: 5px;
-  border: 1px solid #d9d9d9;
-  background-color: #fff;
-  cursor: pointer;
+.check_sec .check_wrap {
+  width: 300px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 4px 8px;
-  gap: 4px;
 }
-.map_view > .map > button > img {
-  width: 16px;
-}
-.map_view > .map > button > span {
+.check_sec .check_wrap > label {
+  width: 140px;
+  padding: 8px 0;
   font-size: 14px;
 }
-.theme {
-  width: 100%;
+/* 별점 */
+.review_wrap {
+  padding: 28px 0;
+  border-bottom: 1px solid #ededed;
 }
-.theme > h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 28px 0;
+.review_wrap > h3 {
+  margin-bottom: 28px;
 }
-.theme_wrap {
-  width: 100%;
+.review {
   display: flex;
-}
-.theme_wrap button {
   width: fit-content;
-  height: fit-content;
+  margin: 0 auto;
+  gap: 20px;
+}
+.review > button {
+  width: 50px;
+  height: 29px;
   color: #8744ff;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
   background-color: #fff;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 8px;
-  gap: 4px;
 }
-.theme_wrap > div {
-  width: 150px;
-  box-sizing: border-box;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-/* 오른쪽 컨텐츠 */
+/* 오른쪽 섹션 */
 .right_con {
   padding: 28px 0;
   width: 1060px;
@@ -281,7 +309,6 @@ h1 {
   top: 30px;
   left: 0;
   display: none;
-  z-index: 10;
 }
 .list_btn > button:hover > .btn_list {
   display: flex;
@@ -293,104 +320,103 @@ h1 {
   font-weight: 700;
 }
 /* 카드 */
-.card_con {
+.card_wrap {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.card_wrap {
-  width: 1060px;
-  height: fit-content;
+.top_card {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  height: 308px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
 }
 .card {
-  width: 335px;
-  height: 470px;
-  background-color: #fff;
-  overflow: hidden;
+  width: 100%;
+  height: 280px;
   border-radius: 15px;
-  box-shadow: 0 3px 10px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 .card:hover {
-  box-shadow: 0 3px 13px 0px rgba(0, 0, 0, 0.15);
-  transform: translateY(-1px);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
-.card:hover > .card_text > a > .text_bottom > span:first-child {
+.card:hover .card_review > span {
   background-color: #8744ff;
   color: #fff;
 }
 .card > a {
-  display: block;
-  width: 100%;
-  height: 240px;
-  overflow: hidden;
-}
-.card > a > img {
-  width: 100%;
-  position: relative;
-  bottom: 70%;
-}
-/* 카드 텍스트 */
-.card_text {
-  width: 100%;
-  height: 230px;
-}
-.card_text > a {
-  display: block;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  padding: 36px 24px;
-  color: var(--main-black-color);
+  display: flex;
+  background-color: #fff;
 }
-.text_top {
-  font-size: var(--sec-p-size);
-  font-weight: 500;
+.card > a > img {
+  width: 400px;
+  height: 280px;
+}
+.text_wrap {
+  width: 660px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 28px;
   display: flex;
   justify-content: space-between;
 }
-.text_top > button {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
+.text_left {
+  font-size: 14px;
 }
-.text_top > button > img {
-  width: 22px;
-  height: 20px;
-  align-items: center;
-  background-color: #fff;
+.text_left > p {
+  color: #aaa;
+  margin-bottom: 8px;
+  font-weight: 300;
 }
-.card_text > a > h3 {
+.text_left > h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.text_left > h2 {
   font-size: var(--sec-title-size2);
-  font-weight: 600;
-  line-height: 40px;
-  margin-bottom: 36px;
+  font-weight: 700;
+  line-height: 32px;
 }
-.card_text > a > h2 {
-  font-size: var(--sec-title-size);
-  font-weight: 500;
-  line-height: 48px;
-}
-.text_bottom {
-  color: #8744ff;
+.card_review {
   display: flex;
   gap: 8px;
-  align-items: center;
 }
-.text_bottom > span:first-child {
-  display: block;
+.card_review > span {
   width: 50px;
   height: 29px;
-  line-height: 29px;
   border-radius: 5px;
+  background-color: #fff;
   text-align: center;
+  line-height: 29px;
+  color: #8744ff;
+  font-weight: 300;
   transition: 0.2s;
+}
+.card_review > p {
+  color: #8744ff;
+  height: 29px;
+  line-height: 29px;
+  font-weight: 300;
+}
+.text_right {
+  display: flex;
+  align-items: end;
+  line-height: 52px;
+}
+.text_right > h3 {
+  font-size: 28px;
+}
+.text_right > p {
+  font-size: var(--sec-p-size);
+  font-weight: 600;
+  line-height: 44px;
 }
 /* 페이지 번호 */
 .button_num {
@@ -399,7 +425,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 32px 0 60px 0;
+  margin-bottom: 60px;
   gap: 20px;
 }
 .button_num > button {
