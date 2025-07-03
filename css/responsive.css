@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 모바일 ~ 큰태블릿 */
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  /* 헤더 */
+  .header {
+    width: 100%;
+  }
+  .head_wrap {
+    width: 95%;
+    margin: 0 20px;
+  }
+  .head_left {
+    gap: 0;
+  }
+  .all_menu {
+    width: 160px;
+  }
+  .all_menu > .login {
+    width: 136px;
+  }
+  h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-44%);
+  }
+  #gnb {
+    display: none;
+  }
+  .head_right a {
+    padding: 8px 8px;
+    margin-right: 18px;
+  }
+  .head_right p {
+    display: none;
+  }
+  /* 메인이미지 */
+  .sec1 {
+    height: 300px;
+    padding: 0 20px;
+  }
+  .sec1 > h2 {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto;
+    width: 260px;
+    margin-top: 40px;
+  }
+  /* 검색영역 */
+  .search_wrap {
+    width: 260px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .btn_wrap {
+    height: 28px;
+  }
+  .btn_wrap > button {
+    font-size: 14px;
+  }
+  /* 날짜 인원 */
+  .info_wrap {
+    height: fit-content;
+    gap: 0;
+    flex-direction: column;
+  }
+  /* 검색창 */
+  .search_bar {
+    width: 100%;
+  }
+  .search_bar > input {
+    font-size: 14px;
+    height: 32px;
+  }
+  .search_bar > a {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1600px) {
+}
