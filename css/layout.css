@@ -8,6 +8,11 @@ body {
     'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
   overflow-x: hidden;
 }
+/* 공통 */
+.con {
+  width: 1400px;
+  margin: 0 auto;
+}
 header {
   width: 100%;
   height: 80px;
@@ -53,6 +58,7 @@ header {
   box-sizing: border-box;
   padding: 12px 12px 0px 12px;
   border-radius: 0 0 5px 0;
+  z-index: 99;
 }
 
 .all_menu > li > a {
@@ -374,15 +380,15 @@ h1 {
   position: relative;
   padding-bottom: 100px;
 }
-.sec2 > .con {
-  width: 1400px;
-  margin: 0 auto;
-}
 .sec2 > .con > h3 {
+  display: flex;
+  justify-self: center;
   font-size: var(--sec-title-size);
   font-weight: 600;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: fit-content;
   text-align: center;
-  margin: 80px 0px;
 }
 .sec2 > .con > .swiper-wrapper {
   width: 100%;
@@ -439,11 +445,11 @@ h1 {
 /* 카드 텍스트 */
 .card_text {
   width: 100%;
-  height: 230px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 24px 24px;
+  padding: 12px 12px;
 }
 .text_top {
   font-size: var(--sec-p-size);
@@ -454,21 +460,21 @@ h1 {
   position: relative;
 }
 .card button {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   position: absolute;
-  right: 24px;
+  right: 12px;
   top: 278px;
   z-index: 30;
   cursor: pointer;
 }
 .card button > img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   align-items: center;
   background-color: #fff;
 }
@@ -498,6 +504,18 @@ h1 {
   text-align: center;
   transition: 0.2s;
 }
+.more {
+  display: flex;
+  width: 72px;
+  height: 36px;
+  justify-content: center;
+  line-height: 37px;
+  margin: 0 auto;
+  border: 1px solid #808080;
+  border-radius: 100px;
+  margin-top: 40px;
+  visibility: hidden;
+}
 /* 세번째 섹션 */
 .sec3 {
   width: 100%;
@@ -509,8 +527,6 @@ h1 {
   position: relative;
 }
 .sec3 > .con {
-  width: 1400px;
-  margin: 0 auto;
   overflow: hidden;
 }
 .sec3_swiper {
@@ -527,6 +543,7 @@ h1 {
   height: 300px;
   background: url(../img/main/toss.png);
   background-position: center;
+  background-size: cover;
   border-radius: 15px;
 }
 .banner > a {
@@ -565,9 +582,7 @@ h1 {
   margin-bottom: 80px;
 }
 .sec4 > .con {
-  width: 1400px;
   height: fit-content;
-  margin: 0 auto;
 }
 .sec4swiper {
   width: 100%;
@@ -664,7 +679,6 @@ h1 {
 .box_wrap > .box {
   width: 360px;
   height: 200px;
-  background-color: aqua;
   flex-shrink: 0;
   border-radius: 5px;
   background: linear-gradient(
@@ -816,10 +830,6 @@ h1 {
   border-top: 1px solid #ededed;
   padding: 80px 0 100px;
   position: relative;
-}
-.sec7 > .con {
-  width: 1400px;
-  margin: 0 auto;
 }
 .sec7 > .con > h3 {
   font-size: var(--sec-title-size);
@@ -1006,7 +1016,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 .num:first-child {
   border-right: 1px solid #bfbfbf;

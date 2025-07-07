@@ -375,6 +375,7 @@
               </div>
             </div>
           </div>
+          <a href="./sub/search.html" class="more">더보기</a>
         </div>
       </section>
       <!-- 세번째 섹션 -->
@@ -777,6 +778,7 @@
               </div>
             </div>
           </div>
+          <a href="./sub/search.html" class="more">더보기</a>
         </div>
       </section>
       <!-- 일곱번째 섹션 -->
@@ -1070,15 +1072,20 @@
     <script>
       var swiper = new Swiper('.sec2Swiper', {
         cssMode: true, //옵션
-        slidesPerView: 4, //보여질 개수
-        slidesPerGroup: 4, //한 번에 슬라이딩될 개수
-        spaceBetween: 20,
+        slidesPerView: 2, //보여질 개수
+        slidesPerGroup: 2, //한 번에 슬라이딩될 개수
+        spaceBetween: 12,
         navigation: {
           nextEl: '.swiper2-next',
           prevEl: '.swiper2-prev',
         },
-        mousewheel: true,
-        keyboard: true,
+        breakpoints: {
+          1024: {
+            slidesPerView: 4, //브라우저가 1024보다 클 때
+            slidesPerGroup: 4,
+            spaceBetween: 20,
+          },
+        },
       });
     </script>
     <!-- 하트 아이콘 클릭 -->
@@ -1096,7 +1103,7 @@
     <!-- 세번째 섹션 -->
     <script>
       var sec3Swiper = new Swiper('.sec3_swiper', {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 40,
         autoplay: {
           delay: 3000,
@@ -1105,6 +1112,12 @@
         pagination: {
           el: '.sec3_pagination',
           clickable: true,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 2, //브라우저가 1024보다 클 때,
+            spaceBetween: 40,
+          },
         },
       });
     </script>
@@ -1144,9 +1157,17 @@
     <!-- 일곱번째 섹션 -->
     <script>
       var sec7Swiper = new Swiper('.sec7_swiper', {
-        slidesPerView: 2, //보여질 개수
-        slidesPerGroup: 2, //한 번에 슬라이딩될 개수
+        slidesPerView: 1, //보여질 개수
+        slidesPerGroup: 1, //한 번에 슬라이딩될 개수
         spaceBetween: 40,
+        breakpoints: {
+          1024: {
+            //브라우저가 1024보다 클 때,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 40,
+          },
+        },
       });
     </script>
   </body>
