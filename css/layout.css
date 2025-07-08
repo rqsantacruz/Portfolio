@@ -588,12 +588,13 @@ h1 {
   width: 100%;
   height: fit-content;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .sec4 .swiper-wrapper {
+  height: 100%;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  left: 910px;
+  justify-content: start;
 }
 .rec_wrap a {
   color: #fff;
@@ -609,7 +610,6 @@ h1 {
       rgba(255, 255, 255, 0) 100%
     ),
     url(../img/main/japan_castle.jpg) no-repeat;
-  box-shadow: 2px 4px 14px 2px rgba(0, 0, 0, 0.15);
   background-size: cover;
   background-position: center;
 }
@@ -631,16 +631,9 @@ h1 {
   padding-bottom: 80px;
   font-weight: 700;
 }
-.rec_card > a > p {
-  font-size: var(--sec-p-size);
-  line-height: 32px;
-  margin-bottom: 44px;
-  font-weight: 400;
-}
 .sec4 .rec_card.swiper-slide-active {
   width: 520px;
-  height: 520px;
-  /* transition: 0.5s; */
+  height: 440px;
 }
 /* 다섯번째 섹션 */
 .sec5 {
@@ -659,21 +652,43 @@ h1 {
 .sec5 > p {
   line-height: 24px;
 }
-.box_wrap {
-  width: 100%;
+.con_wrap {
+  display: flex;
   position: relative;
+  height: 360px;
+  box-sizing: border-box;
+}
+.box_wrap {
+  width: max-content;
+  height: 360px;
   padding: 80px 0;
   display: flex;
   gap: 20px;
-  margin: 0 auto;
-  animation: box-wrap 40s linear infinite normal;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
 }
-@keyframes box-wrap {
+.box_wrap1 {
+  animation: auto_slide1 24s linear infinite;
+}
+.box_wrap2 {
+  animation: auto_slide2 24s linear infinite;
+}
+
+@keyframes auto_slide1 {
   from {
-    right: 0px;
+    transform: translateX(0%);
   }
   to {
-    right: 2280px;
+    transform: translateX(-100%);
+  }
+}
+@keyframes auto_slide2 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 .box_wrap > .box {
@@ -740,56 +755,7 @@ h1 {
     url(../img/main/yeosu.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-}
-.box_wrap > .box:nth-child(8) {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/main/gyeonju.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.box_wrap > .box:nth-child(9) {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/main/busan.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.box_wrap > .box:nth-child(10) {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/main/jeonju.png) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.box_wrap > .box:nth-child(11) {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/main/samcheok.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.box_wrap > .box:nth-child(12) {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.45) 15%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../img/main/yeosu.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
+  margin-right: 20px;
 }
 .box_wrap > .box > a {
   display: flex;
