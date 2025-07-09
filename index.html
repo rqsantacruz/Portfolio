@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>트래블러</title>
+    <!-- css -->
     <link rel="stylesheet" href="./css/layout.css" />
+    <!-- 반응형 -->
+    <link rel="stylesheet" href="./css/index_responsive.css" />
+    <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -24,9 +28,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- 반응형 -->
-    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
+
   <body>
     <!-- 헤더 -->
     <header>
@@ -898,7 +901,7 @@
     <!-- js -->
     <!-- 첫번째섹션 -->
     <!-- 숙소 버튼 -->
-    <script>
+    <!-- <script>
       $(function () {
         $('#local').on('click', function () {
           if (!$(this).hasClass('active')) {
@@ -914,9 +917,9 @@
           }
         });
       });
-    </script>
+    </script> -->
     <!-- 체크인 - 체크아웃 -->
-    <script>
+    <!-- <script>
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const picker = new Litepicker({
@@ -948,9 +951,9 @@
           years: true,
         },
       });
-    </script>
+    </script> -->
     <!-- 인원, 객실 -->
-    <script>
+    <!-- <script>
       document.addEventListener('DOMContentLoaded', () => {
         const guestRoomCountTrigger = document.getElementById(
           'guestRoomCountTrigger'
@@ -1045,9 +1048,9 @@
 
         updateDisplay(); // 페이지 로드 시 초기값 설정
       });
-    </script>
+    </script> -->
     <!-- 검색창 -->
-    <script>
+    <!-- <script>
       let mainSearch = $('#main_search');
       let searchBtn = $('#search_btn');
       $(function () {
@@ -1059,9 +1062,9 @@
           }
         });
       });
-    </script>
+    </script> -->
     <!-- 두번째 섹션 -->
-    <script>
+    <!-- <script>
       var swiper = new Swiper('.sec2Swiper', {
         cssMode: true, //옵션
         slidesPerView: 2, //보여질 개수
@@ -1084,9 +1087,9 @@
           },
         },
       });
-    </script>
+    </script> -->
     <!-- 하트 아이콘 클릭 -->
-    <script>
+    <!-- <script>
       $('.heart').on('click', function () {
         let src = $(this).attr('src');
 
@@ -1096,9 +1099,9 @@
           $(this).attr('src', './img/main/none_heart.png');
         }
       });
-    </script>
+    </script> -->
     <!-- 세번째 섹션 -->
-    <script>
+    <!-- <script>
       var sec3Swiper = new Swiper('.sec3_swiper', {
         slidesPerView: 1,
         spaceBetween: 40,
@@ -1117,9 +1120,9 @@
           },
         },
       });
-    </script>
+    </script> -->
     <!-- 네번째 섹션 -->
-    <script>
+    <!-- <script>
       var swiper = new Swiper('.sec4swiper', {
         effect: 'coverflow',
         grabCursor: true,
@@ -1139,9 +1142,9 @@
           },
         },
       });
-    </script>
+    </script> -->
     <!-- 여섯번째 섹션 -->
-    <script>
+    <!-- <script>
       var swiper = new Swiper('.sec6Swiper', {
         cssMode: true, //옵션
         slidesPerView: 2, //보여질 개수
@@ -1166,9 +1169,9 @@
         mousewheel: true,
         keyboard: true,
       });
-    </script>
+    </script> -->
     <!-- 일곱번째 섹션 -->
-    <script>
+    <!-- <script>
       var sec7Swiper = new Swiper('.sec7_swiper', {
         slidesPerView: 1, //보여질 개수
         slidesPerGroup: 1, //한 번에 슬라이딩될 개수
@@ -1181,6 +1184,8 @@
           },
         },
       });
-    </script>
+    </script> -->
+    <!-- js -->
+    <script src="./js/index.js"></script>
   </body>
 </html>

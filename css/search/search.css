@@ -97,7 +97,10 @@ h1 {
   transform: translateX(-50%);
   align-items: center;
 }
-.info_wrap input {
+.search > input {
+  width: 80px;
+}
+header .info_wrap input {
   outline: none;
   border: none;
   width: 28px;
@@ -130,7 +133,7 @@ h1 {
   font-size: var(--sec-p-size);
   padding: 16px 24px;
 }
-/* 섹션 */
+/* 메인 섹션 */
 main {
   width: 100%;
   height: auto;
@@ -140,13 +143,16 @@ main {
   height: 100%;
   margin: 0 auto;
   display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+.con_wrap {
+  display: flex;
 }
 /* 왼쪽섹션 */
 .left_con {
   width: 300px;
-  height: fit-content;
+  height: 100%;
+  margin-right: 40px;
 }
 /* 지도 */
 .map_wrap {
@@ -262,7 +268,7 @@ h3 {
 /* 오른쪽 섹션 */
 .right_con {
   padding: 28px 0;
-  width: 1060px;
+  width: 100%;
   height: fit-content;
 }
 .result {
@@ -275,6 +281,7 @@ h3 {
 .result > h2 {
   font-size: var(--sec-title-size2);
   font-weight: 500;
+  line-height: 28px;
 }
 .list_btn > button {
   width: 120px;
@@ -425,7 +432,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin: 40px 0 60px;
   gap: 20px;
 }
 .button_num > button {

@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>트래블러 - 검색'일본'</title>
+    <!-- css -->
     <link rel="stylesheet" href="../css/search/search.css" />
+    <!-- 반응형 -->
+    <link rel="stylesheet" href="../css/search/search_responsive.css" />
     <!-- jquery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
@@ -81,161 +84,187 @@
     <main>
       <div class="con">
         <!-- 왼쪽 컨텐츠 -->
-        <div class="left_con">
-          <!-- 지도 -->
-          <div class="map_wrap">
-            <a
-              href="https://www.google.co.kr/maps/place/%EC%9D%BC%EB%B3%B8+%EA%B5%90%ED%86%A0%EB%B6%80+%EA%B5%90%ED%86%A0%EC%8B%9C/@34.9976631,135.7236453,12.62z/data=!4m6!3m5!1s0x6001a8d6cd3cc3f1:0xc0961d366bbb1d3d!8m2!3d35.011564!4d135.7681489!16zL20vMDlkNF8?hl=ko&entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D"
-              target="_blank"
-            >
-              <span>지도에서 보기</span>
-            </a>
-          </div>
-          <!-- 가격 범위 -->
-          <div class="bar_wrap">
-            <h3>가격 범위</h3>
-            <label for="bar">
-              <input type="range" min="0" max="9" value="9" />
-            </label>
-            <div class="price">
-              <p>0₩</p>
-              <span>~</span>
-              <p>500,000₩</p>
+        <div class="con_wrap">
+          <div class="left_con">
+            <!-- 지도 -->
+            <div class="map_wrap">
+              <a
+                href="https://www.google.co.kr/maps/place/%EC%9D%BC%EB%B3%B8+%EA%B5%90%ED%86%A0%EB%B6%80+%EA%B5%90%ED%86%A0%EC%8B%9C/@34.9976631,135.7236453,12.62z/data=!4m6!3m5!1s0x6001a8d6cd3cc3f1:0xc0961d366bbb1d3d!8m2!3d35.011564!4d135.7681489!16zL20vMDlkNF8?hl=ko&entry=ttu&g_ep=EgoyMDI1MDUxNS4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+              >
+                <span>지도에서 보기</span>
+              </a>
+            </div>
+            <!-- 가격 범위 -->
+            <div class="bar_wrap">
+              <h3>가격 범위</h3>
+              <label for="bar">
+                <input type="range" min="0" max="9" value="9" />
+              </label>
+              <div class="price">
+                <p>0₩</p>
+                <span>~</span>
+                <p>500,000₩</p>
+              </div>
+            </div>
+            <!-- 숙소 종류 -->
+            <div class="check_sec">
+              <h3>숙소 종류</h3>
+              <div class="check_wrap">
+                <label>
+                  <input type="checkbox" name="giftset" value="1" checked />
+                  캡슐 호텔
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="2" />
+                  게스트 하우스
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  모텔
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  홈스테이
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  아파트먼트
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  러브호텔
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  료칸
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  리조트
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  호텔
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  비앤비
+                </label>
+              </div>
+            </div>
+            <!-- 별점 -->
+            <div class="review_wrap">
+              <h3>이용객 평균 별점</h3>
+              <div class="review">
+                <button>★ 6</button>
+                <button>★ 7</button>
+                <button>★ 8</button>
+                <button>★ 9</button>
+              </div>
+            </div>
+            <!-- 편의 시설 -->
+            <div class="check_sec">
+              <h3>편의시설</h3>
+              <div class="check_wrap">
+                <label>
+                  <input type="checkbox" name="giftset" value="1" checked />
+                  샤워
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="2" />
+                  인터넷
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  에어컨
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  난방
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  주방
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  세탁기
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  조식
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  레스토랑
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  와이파이
+                </label>
+                <label>
+                  <input type="checkbox" name="giftset" value="3" />
+                  픽업서비스
+                </label>
+              </div>
             </div>
           </div>
-          <!-- 숙소 종류 -->
-          <div class="check_sec">
-            <h3>숙소 종류</h3>
-            <div class="check_wrap">
-              <label>
-                <input type="checkbox" name="giftset" value="1" checked />
-                캡슐 호텔
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="2" />
-                게스트 하우스
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                모텔
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                홈스테이
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                아파트먼트
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                러브호텔
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                료칸
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                리조트
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                호텔
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                비앤비
-              </label>
+          <!-- 오른쪽 컨텐츠 -->
+          <div class="right_con">
+            <div class="result">
+              <h2>'교토'숙소 검색 결과</h2>
+              <!-- 추천순 -->
+              <div class="list_btn">
+                <button>
+                  추천순
+                  <img
+                    src="../img/sub/search/down_arrow.png"
+                    alt="down_arrow"
+                  />
+                  <ul class="btn_list">
+                    <li>추천순</li>
+                    <li>평점높은순</li>
+                    <li>리뷰많은순</li>
+                    <li>낮은가격순</li>
+                    <li>높은가격순</li>
+                    <li>거리순</li>
+                  </ul>
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- 별점 -->
-          <div class="review_wrap">
-            <h3>이용객 평균 별점</h3>
-            <div class="review">
-              <button>★ 6</button>
-              <button>★ 7</button>
-              <button>★ 8</button>
-              <button>★ 9</button>
-            </div>
-          </div>
-          <!-- 편의 시설 -->
-          <div class="check_sec">
-            <h3>편의시설</h3>
-            <div class="check_wrap">
-              <label>
-                <input type="checkbox" name="giftset" value="1" checked />
-                샤워
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="2" />
-                인터넷
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                에어컨
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                난방
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                주방
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                세탁기
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                조식
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                레스토랑
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                와이파이
-              </label>
-              <label>
-                <input type="checkbox" name="giftset" value="3" />
-                픽업서비스
-              </label>
-            </div>
-          </div>
-        </div>
-        <!-- 오른쪽 컨텐츠 -->
-        <div class="right_con">
-          <div class="result">
-            <h2>'교토'숙소 검색 결과</h2>
-            <!-- 추천순 -->
-            <div class="list_btn">
-              <button>
-                추천순
-                <img src="../img/sub/search/down_arrow.png" alt="down_arrow" />
-                <ul class="btn_list">
-                  <li>추천순</li>
-                  <li>평점높은순</li>
-                  <li>리뷰많은순</li>
-                  <li>낮은가격순</li>
-                  <li>높은가격순</li>
-                  <li>거리순</li>
-                </ul>
-              </button>
-            </div>
-          </div>
-          <!-- 카드 영역 -->
-          <div class="card_wrap">
-            <div class="top_card">
-              <!-- 카드1 -->
+            <!-- 카드 영역 -->
+            <div class="card_wrap">
+              <div class="top_card">
+                <!-- 카드1 -->
+                <div class="card">
+                  <a href="./page_detail.html">
+                    <img src="../img/sub/search/saka.webp" alt="사카호텔교토" />
+                    <div class="text_wrap">
+                      <div class="text_left">
+                        <p>트래블러 제휴 숙소</p>
+                        <h3>Downtown Kyoto</h3>
+                        <h2>사카 호텔 교토</h2>
+                        <p>Saka Hotel Kyoto</p>
+                        <div class="card_review">
+                          <span>★ 4.8</span>
+                          <p>(1,729)</p>
+                        </div>
+                      </div>
+                      <div class="text_right">
+                        <h3>54,366원</h3>
+                        <p>/1박</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- 카드2 -->
               <div class="card">
-                <a href="./page_detail.html">
-                  <img src="../img/sub/search/saka.webp" alt="사카호텔교토" />
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
                   <div class="text_wrap">
                     <div class="text_left">
-                      <p>트래블러 제휴 숙소</p>
                       <h3>Downtown Kyoto</h3>
                       <h2>사카 호텔 교토</h2>
                       <p>Saka Hotel Kyoto</p>
@@ -251,216 +280,195 @@
                   </div>
                 </a>
               </div>
-            </div>
-            <!-- 카드2 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+              <!-- 카드3 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드3 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드4 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드4 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드5 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드5 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드6 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드6 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드7 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드7 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드8 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드8 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드9 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드9 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드10 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드10 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
+                </a>
+              </div>
+              <!-- 카드11 -->
+              <div class="card">
+                <a href="#">
+                  <img src="../img/sub/search/top_card.webp" alt="탑카드" />
+                  <div class="text_wrap">
+                    <div class="text_left">
+                      <h3>Downtown Kyoto</h3>
+                      <h2>사카 호텔 교토</h2>
+                      <p>Saka Hotel Kyoto</p>
+                      <div class="card_review">
+                        <span>★ 4.8</span>
+                        <p>(1,729)</p>
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <h3>54,366원</h3>
+                      <p>/1박</p>
                     </div>
                   </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- 카드11 -->
-            <div class="card">
-              <a href="#">
-                <img src="../img/sub/search/top_card.webp" alt="탑카드" />
-                <div class="text_wrap">
-                  <div class="text_left">
-                    <h3>Downtown Kyoto</h3>
-                    <h2>사카 호텔 교토</h2>
-                    <p>Saka Hotel Kyoto</p>
-                    <div class="card_review">
-                      <span>★ 4.8</span>
-                      <p>(1,729)</p>
-                    </div>
-                  </div>
-                  <div class="text_right">
-                    <h3>54,366원</h3>
-                    <p>/1박</p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>

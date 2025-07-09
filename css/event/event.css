@@ -143,6 +143,10 @@ h1 {
   font-size: var(--sec-p-size);
   padding: 16px 24px;
 }
+.head_right > a > p {
+  font-size: var(--sec-p-size);
+  font-weight: 400;
+}
 /* 첫번째 섹션 */
 .sec1 {
   width: 100%;
