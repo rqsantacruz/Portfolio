@@ -122,8 +122,8 @@
     line-height: 20px;
   }
   /* 스와이퍼 화살표 */
-  .swiper2-prev,
-  .swiper2-next {
+  .sec2 .swiper2-prev,
+  .sec2 .swiper2-next {
     display: none;
   }
   /* 더보기 */
@@ -199,8 +199,8 @@
     transform: translateY(-30px);
   }
   /* 여섯번째 섹션 */
-  .swiper6-prev,
-  .swiper6-next {
+  .sec2 .swiper6-prev,
+  .sec2 .swiper6-next {
     display: none;
   }
   /* 일곱번째 섹션 */
@@ -318,7 +318,7 @@
     padding-bottom: 60px;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
   /* 헤더 */
   .header {
     width: 100%;
@@ -352,8 +352,8 @@
     display: none;
   }
   /* 섹션2 - 스와이퍼 화살표 */
-  .swiper2-prev,
-  .swiper2-next {
+  .sec2 .swiper2-prev,
+  .sec2 .swiper2-next {
     display: none;
   }
   .more {
@@ -372,24 +372,24 @@
     padding-bottom: 60px;
   }
   /* 여섯번째 섹션 */
-  .swiper6-prev,
-  .swiper6-next {
+  .sec2 .swiper6-prev,
+  .sec2 .swiper6-next {
     display: none;
   }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1800px) {
+@media screen and (min-width: 1440px) and (max-width: 1800px) {
   /* 섹션2 - 스와이퍼 화살표 */
-  .swiper2-prev,
-  .swiper2-next {
+  .sec2 .swiper2-prev,
+  .sec2 .swiper2-next {
     display: none;
   }
   .more {
     visibility: visible;
   }
   /* 여섯번째 섹션 */
-  .swiper6-prev,
-  .swiper6-next {
+  .sec2 .swiper6-prev,
+  .sec2 .swiper6-next {
     display: none;
   }
 }

@@ -107,7 +107,7 @@ h1 {
   padding: 0 24px;
   transition: 0.2s;
 }
-#gnb > ul > li:nth-child(4) > a {
+#gnb > ul > li:nth-child(3) > a {
   color: #8744ff;
 }
 #gnb > ul a:hover {
@@ -536,7 +536,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 .num:first-child {
   border-right: 1px solid #bfbfbf;

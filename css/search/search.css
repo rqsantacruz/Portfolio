@@ -567,7 +567,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 .num:first-child {
   border-right: 1px solid #bfbfbf;

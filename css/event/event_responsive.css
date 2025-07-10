@@ -5,6 +5,9 @@
   .con {
     width: 95%;
   }
+  .con h4 {
+    font-size: 26px;
+  }
   /* 헤더 */
   .header {
     width: 100%;
@@ -37,6 +40,51 @@
   .head_right p {
     display: none;
   }
+  /* 메인이미지 */
+  .main_text {
+    width: 100%;
+    top: 40px;
+  }
+  .main_text h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .main_text h2 {
+    font-size: 38px;
+    line-height: 60px;
+    text-align: center;
+  }
+  /* 두번째 섹션 */
+  .sec2_text > p {
+    font-size: 20px;
+  }
+  .sec2_text > span {
+    font-size: 26px;
+  }
+  .sec2_text > h3 {
+    font-size: 34px;
+  }
+  .sec2_text > h4 {
+    font-size: 26px;
+  }
+  .sec2 .content {
+    width: 100%;
+    gap: 12px;
+    flex-direction: column;
+  }
+  .sec2 .card {
+    width: 292px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  .sec2 .card_window {
+    width: 236px;
+    height: 200px;
+  }
+  .sec2 > .con > a {
+    width: 100%;
+  }
   /* 푸터 */
   .foot_top {
     height: fit-content;
@@ -64,5 +112,52 @@
   }
   .right {
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* 메인이미지 */
+  .main_text {
+    width: 100%;
+    top: 120px;
+  }
+  .main_text h3 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .main_text h2 {
+    font-size: 72px;
+    line-height: 92px;
+    text-align: center;
+  }
+  /* 두번째 섹션 */
+  .sec2 .content {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  /* 메인이미지 */
+  .main_text {
+    width: fit-content;
+    top: 200px;
+  }
+  .main_text h3 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .main_text h2 {
+    font-size: 100px;
+    line-height: 112px;
+    text-align: center;
+  }
+  /* 두번째 섹션 */
+  .sec2 .card {
+    width: 440px;
+    height: 644px;
+  }
+  .sec2 .card_window {
+    width: 384px;
+    height: 336px;
   }
 }
