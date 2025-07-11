@@ -101,27 +101,60 @@ h1 {
   width: fit-content;
   text-align: center;
   display: flex;
-  gap: 8px;
+  gap: 12px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  align-items: center;
+}
+.search {
+  width: 180px;
+  min-width: 60px;
+}
+.date_picker {
+  width: 120px;
+}
+header .date_picker input[type='text'],
+.con .date_picker input[type='text'] {
+  width: 100%;
+}
+header .search input[type='text'],
+.con .search input[type='text'] {
+  width: 100%;
+}
+.count {
+  display: flex;
+}
+.count > label {
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
 }
 .info_wrap input {
   outline: none;
   border: none;
-  background-color: #ededed;
-  width: 28px;
+  width: 19px;
   height: 28px;
   box-sizing: border-box;
-  padding: 0 10px;
-  border-radius: 5px;
+  border-bottom: 1px solid #a6a6a6;
+  text-align: center;
 }
 .info_wrap input:focus {
-  background-color: #d9d9d9;
+  border-color: var(--main-black-color);
 }
 .info_wrap input:first-child {
   width: fit-content;
 }
+/* 날짜 */
+#dateRange {
+  text-align: center;
+  cursor: pointer;
+}
+/* 인원, 객실 */
+.count_picker input {
+  text-align: center;
+}
+/* 로그인 */
 .head_right > a {
   display: flex;
   align-items: center;
@@ -130,8 +163,12 @@ h1 {
   font-size: var(--sec-p-size);
   padding: 16px 24px;
 }
-
 /* 첫번째 섹션 */
+.responsive_search {
+  height: 28px;
+  margin: 28px 0;
+  display: none;
+}
 .top_wrap > span {
   display: block;
   font-size: 18px;
@@ -328,6 +365,34 @@ h1 {
 }
 .sec2 > .con > .right > .icon_wrap > span > i {
   margin-right: 8px;
+}
+/* 반응형 두번째 섹션 */
+.sec2_respon .text_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.sec2_respon span {
+  width: 50px;
+  height: 30px;
+  background-color: #8744ff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  margin-right: 8px;
+}
+.sec2_respon h4 {
+  font-weight: 500;
+  color: #666;
+  margin-right: 8px;
+}
+.sec2_respon a {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
 }
 /* 세번째 섹션 */
 .sec3 button {
@@ -718,6 +783,7 @@ footer {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .foot_top > ul {
   display: flex;

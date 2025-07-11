@@ -72,6 +72,7 @@
   }
   /* 푸터 */
   .foot_top {
+    width: 100%;
     height: fit-content;
     padding: 8px;
   }

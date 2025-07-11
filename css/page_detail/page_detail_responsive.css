@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+@media screen and (min-width: 320px) and (max-width: 1439px) {
+  /* 공통 */
+  .con {
+    width: 95%;
+  }
+  /* 헤더 */
+  .header {
+    width: 100%;
+  }
+  .head_wrap {
+    width: 95%;
+    margin: 0 20px;
+  }
+  .head_left {
+    gap: 0;
+  }
+  .all_menu {
+    width: 160px;
+  }
+  .all_menu > .login {
+    width: 136px;
+  }
+  h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-44%);
+  }
+  .head_right a {
+    padding: 8px 8px;
+    margin-right: 18px;
+  }
+  .head_right p {
+    display: none;
+  }
+  header .info_wrap {
+    display: none;
+  }
+  .info_wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .search {
+    width: 100px;
+  }
+  .date_picker {
+    width: 60px;
+  }
+  /* 컨텐츠 */
+  .responsive_search {
+    display: flex;
+  }
+  /* 첫번째 섹션 */
+  .top_wrap > h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+  /* 이미지 */
+  .sec1 > .con .img_wrap {
+    margin: 28px 0;
+  }
+  .sec1 > .con .img_wrap > .left {
+    width: 100%;
+    height: 226px;
+    border-radius: 15px;
+  }
+  .sec1 > .con .img_wrap > .left > img {
+    height: 100%;
+    transform: skew(center);
+  }
+  .sec1 > .con .img_wrap > .right {
+    display: none;
+  }
+  /* 메인 내용 */
+  .bottom_wrap {
+    flex-direction: column;
+  }
+  .bottom_wrap > .left {
+    margin-bottom: 18px;
+  }
+  .bottom_wrap > .left > p {
+    font-size: 16px;
+  }
+  .bottom_wrap > .right > .price > h3 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .bottom_wrap > .right > .price > span {
+    font-size: 20px;
+  }
+  /* 두번째 섹션 */
+  .sec2 {
+    display: none;
+  }
+  /* 세번째 섹션 */
+  .sec3 > .con > .box_wrap > .box {
+    padding: 10px 20px 20px;
+  }
+  .sec3 > .con .con_wrap {
+    flex-direction: column;
+  }
+  .sec3 > .con .con_wrap > .window {
+    width: 100%;
+    height: 260px;
+  }
+  .sec3 .text {
+    margin-bottom: 12px;
+  }
+  .sec3 .text > ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .sec3 .content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .sec3 .content > .con_right {
+    width: 100%;
+  }
+  /* 아홉번째 섹션 */
+  .sec9 > .con > .map {
+    height: 350px;
+  }
+  .iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* 열번째 섹션 */
+  .sec10 > .con > .top_text {
+    flex-direction: column;
+    align-items: start;
+  }
+  .sec10 > .con > .top_text > h3 {
+    margin-bottom: 12px;
+  }
+  .sec10 > .con > .top_text > p {
+    margin-bottom: 16px;
+  }
+  .list_btn {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  /* 리뷰카드 */
+  .sec10 .con_wrap > .review {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .sec10 .con_wrap > .review > .right {
+    width: 100%;
+  }
+}

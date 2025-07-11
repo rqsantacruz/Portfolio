@@ -135,6 +135,7 @@
   .foot_top {
     height: fit-content;
     padding: 8px;
+    width: 100%;
   }
   .foot_top > ul {
     flex-direction: column;

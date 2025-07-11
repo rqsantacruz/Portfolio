@@ -34,9 +34,25 @@
   .head_right p {
     display: none;
   }
+  header .info_wrap {
+    display: none;
+  }
+  .info_wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .search {
+    width: 100px;
+  }
+  .date_picker {
+    width: 60px;
+  }
   /* 컨텐츠 */
   .con {
     flex-direction: column;
+  }
+  .responsive_search {
+    display: flex;
   }
   .left_con {
     display: none;
@@ -72,6 +88,7 @@
   }
   /* 푸터 */
   .foot_top {
+    width: 100%;
     height: fit-content;
     padding: 8px;
   }
@@ -100,12 +117,18 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .search {
+    width: 140px;
+  }
+  .date_picker {
+    width: 100px;
+  }
   .top_card {
     height: 308px;
     padding-bottom: 28px;
   }
   .top_card > .card {
-    width: 100%;
+    width: 612px;
     height: 280px;
   }
   .top_card > .card > a {
@@ -113,6 +136,26 @@
   }
   .top_card > .card > a .text_wrap {
     width: 100%;
-    flex-direction: row;
+    /* flex-direction: row; */
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .search {
+    width: 180px;
+  }
+  .date_picker {
+    width: 120px;
+  }
+  .left_con {
+    display: block;
+    margin-top: 56px;
+  }
+  .responsive_chip {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .responsive_chip {
+    display: none;
   }
 }

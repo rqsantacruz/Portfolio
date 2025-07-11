@@ -4,19 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사카 호텔 교토 - 트래블러</title>
+    <!-- css -->
     <link rel="stylesheet" href="../css/page_detail/page_detail.css" />
+    <!-- xe icon -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/2/xeicon.min.css" />
+    <!-- 반응형 -->
+    <link
+      rel="stylesheet"
+      href="../css/page_detail/page_detail_responsive.css"
+    />
+    <!-- swiper -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jquery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
       integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- Litepicker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"
+    />
+    <!-- Litepicker JS -->
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
   </head>
   <body>
     <header>
@@ -56,8 +73,9 @@
           <div class="search">
             <input type="text" />
           </div>
-          <div class="date">
-            <input type="date" />
+          <!-- 날짜 -->
+          <div class="date_picker">
+            <input type="text" id="dateRange" readonly placeholder="날짜" />
           </div>
           <div class="count">
             <label>인원</label>
@@ -80,6 +98,25 @@
       <!-- 첫번째 섹션 -->
       <section class="sec1">
         <div class="con">
+          <!-- 반응형 검색창 -->
+          <div class="responsive_search">
+            <div class="info_wrap">
+              <div class="search">
+                <input type="text" />
+              </div>
+              <!-- 날짜 -->
+              <div class="date_picker">
+                <input type="text" id="dateRange" readonly placeholder="날짜" />
+              </div>
+              <div class="count">
+                <label>인원</label>
+                <input type="text" />
+                <label>명</label>
+                <input type="text" />
+                <label>객실</label>
+              </div>
+            </div>
+          </div>
           <div class="top_wrap">
             <span>★★★★</span>
             <h2>사카 호텔 교토</h2>
@@ -170,6 +207,15 @@
           </div>
         </div>
       </section>
+      <div class="sec2_respon">
+        <div class="con">
+          <div class="text_wrap">
+            <span>★ 9.2</span>
+            <h4>1,549명 평가</h4>
+            <a href="#sec10">전체보기 ></a>
+          </div>
+        </div>
+      </div>
       <!-- 세번째 섹션 -->
       <section class="sec3">
         <div class="con">
@@ -400,6 +446,7 @@
           <h3>위치</h3>
           <div class="map">
             <iframe
+              class="iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.419356754037!2d135.77599937667873!3d34.99620616729829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001091367192efb%3A0x27f6584eeb5fbb58!2sSaka%20Hotel%20Kyoto!5e0!3m2!1sko!2skr!4v1750150153153!5m2!1sko!2skr"
               width="1400"
               height="700"
@@ -578,7 +625,41 @@
         </div>
       </div>
     </footer>
-    <!-- js -->'
+    <!-- js -->
+    <!-- 체크인 - 체크아웃 -->
+    <script>
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const picker = new Litepicker({
+        element: document.getElementById('dateRange'),
+        singleMode: false,
+        allowRepick: false,
+        minDays: 2,
+        format: 'YYYY-MM-DD',
+        numberOfMonths: 1,
+        numberOfColumns: 1,
+        lang: 'ko',
+        minDate: today,
+        tooltipText: { one: '박', other: '박' }, // 기본 비워두기
+        tooltipNumber: (totalDays) => {
+          // totalDays가 없거나 (선택 전),
+          // totalDays가 1인 경우 (체크인 날짜만 선택되었거나 당일 체크인/체크아웃)
+          if (!totalDays || totalDays < 2) {
+            return ''; // 툴팁 숨김
+          }
+
+          // totalDays가 2 이상일 때 (체크인/체크아웃 날짜가 모두 선택되어 1박 이상 확정된 상태)
+          const nights = totalDays - 1;
+          return `${nights}박`; // 예: 1박, 2박 등 표시
+        },
+        dropdowns: {
+          minYear: 2025,
+          maxYear: 2026,
+          months: true,
+          years: true,
+        },
+      });
+    </script>
     <!-- 두번째 섹션 -->
     <!-- 리뷰 -->
     <script>

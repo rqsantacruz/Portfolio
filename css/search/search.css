@@ -91,23 +91,43 @@ h1 {
   width: fit-content;
   text-align: center;
   display: flex;
-  gap: 8px;
+  gap: 12px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   align-items: center;
 }
-.search > input {
-  width: 80px;
+.search {
+  width: 180px;
+  min-width: 60px;
 }
-header .info_wrap input {
+.date_picker {
+  width: 120px;
+}
+header .date_picker input[type='text'],
+.con .date_picker input[type='text'] {
+  width: 100%;
+}
+header .search input[type='text'],
+.con .search input[type='text'] {
+  width: 100%;
+}
+.count {
+  display: flex;
+}
+.count > label {
+  font-size: 14px;
+  height: 28px;
+  line-height: 28px;
+}
+.info_wrap input {
   outline: none;
   border: none;
-  width: 28px;
+  width: 19px;
   height: 28px;
   box-sizing: border-box;
-  padding: 0 10px;
   border-bottom: 1px solid #a6a6a6;
+  text-align: center;
 }
 .info_wrap input:focus {
   border-color: var(--main-black-color);
@@ -271,6 +291,33 @@ h3 {
   width: 100%;
   height: fit-content;
 }
+.responsive_search {
+  height: 28px;
+  margin-bottom: 28px;
+  display: none;
+}
+.responsive_chip {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.responsive_chip > button {
+  color: var(--main-black-color2);
+  padding: 4px 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.responsive_chip > button > img {
+  margin-left: 2px;
+}
 .result {
   width: 100%;
   height: auto;
@@ -298,7 +345,7 @@ h3 {
   background-color: #ededed;
   position: relative;
 }
-.list_btn > button > img {
+button > img {
   width: 16px;
   height: 16px;
 }
@@ -332,9 +379,11 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  justify-content: center;
+  align-items: center;
 }
 .top_card {
-  width: 100%;
+  width: fit-content;
   display: flex;
   height: 308px;
   box-sizing: border-box;
@@ -471,6 +520,7 @@ footer {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .foot_top > ul {
   display: flex;
