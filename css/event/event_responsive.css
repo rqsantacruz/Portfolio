@@ -41,6 +41,9 @@
     display: none;
   }
   /* 메인이미지 */
+  .sec1 .con .img_window {
+    height: fit-content;
+  }
   .main_text {
     width: 100%;
     top: 40px;

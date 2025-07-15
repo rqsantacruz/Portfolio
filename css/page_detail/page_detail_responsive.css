@@ -60,10 +60,10 @@
   /* 이미지 */
   .sec1 > .con .img_wrap {
     margin: 28px 0;
+    height: 226px;
   }
   .sec1 > .con .img_wrap > .left {
     width: 100%;
-    height: 226px;
     border-radius: 15px;
   }
   .sec1 > .con .img_wrap > .left > img {
@@ -107,6 +107,7 @@
   }
   .sec3 .text {
     margin-bottom: 12px;
+    text-align: center;
   }
   .sec3 .text > ul {
     flex-direction: row;
@@ -150,5 +151,39 @@
   }
   .sec10 .con_wrap > .review > .right {
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .sec1 > .con .img_wrap > .left {
+    width: 50%;
+    border-radius: 15px 0 0 15px;
+  }
+  .sec1 > .con .img_wrap > .left > img {
+    max-width: 100%;
+  }
+  .sec1 > .con .img_wrap > .right {
+    display: flex;
+    width: 50%;
+    gap: 8px;
+  }
+  .sec1 > .con .img_wrap > .right > img {
+    max-width: calc(50% - 4px);
+    height: 50%;
+  }
+  .bottom_wrap > .left {
+    align-self: flex-start;
+  }
+  /* 컨텐츠내용 */
+  .sec3 > .con .con_wrap > .window {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .sec1 > .con .img_wrap {
+    height: 356px;
+  }
+  .sec3 > .con .con_wrap > .window {
+    width: fit-content;
+    height: 300px;
   }
 }

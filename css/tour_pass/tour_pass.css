@@ -237,6 +237,29 @@ h1 {
   width: 100%;
   height: fit-content;
 }
+.responsive_chip {
+  display: flex;
+  height: fit-content;
+  gap: 6px;
+  margin-bottom: 28px;
+  justify-content: start;
+}
+.responsive_chip > button {
+  color: var(--main-black-color2);
+  padding: 4px 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.responsive_chip > button > img {
+  width: 16px;
+  margin-left: 2px;
+}
 .result {
   width: 100%;
   height: auto;
