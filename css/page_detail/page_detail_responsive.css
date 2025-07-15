@@ -187,3 +187,8 @@
     height: 300px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .sec2_respon {
+    display: none;
+  }
+}
