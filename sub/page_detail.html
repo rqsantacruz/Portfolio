@@ -39,7 +39,7 @@
     <header>
       <div class="head_wrap">
         <div class="head_left">
-          <button>
+          <button class="menu">
             <img src="../img/header_img/menu.png" alt="메뉴" />
             <ul class="all_menu">
               <a href="./login.html" class="login">로그인/회원가입</a>
@@ -626,57 +626,6 @@
       </div>
     </footer>
     <!-- js -->
-    <!-- 체크인 - 체크아웃 -->
-    <script>
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      const picker = new Litepicker({
-        element: document.getElementById('dateRange'),
-        singleMode: false,
-        allowRepick: false,
-        minDays: 2,
-        format: 'YYYY-MM-DD',
-        numberOfMonths: 1,
-        numberOfColumns: 1,
-        lang: 'ko',
-        minDate: today,
-        tooltipText: { one: '박', other: '박' }, // 기본 비워두기
-        tooltipNumber: (totalDays) => {
-          // totalDays가 없거나 (선택 전),
-          // totalDays가 1인 경우 (체크인 날짜만 선택되었거나 당일 체크인/체크아웃)
-          if (!totalDays || totalDays < 2) {
-            return ''; // 툴팁 숨김
-          }
-
-          // totalDays가 2 이상일 때 (체크인/체크아웃 날짜가 모두 선택되어 1박 이상 확정된 상태)
-          const nights = totalDays - 1;
-          return `${nights}박`; // 예: 1박, 2박 등 표시
-        },
-        dropdowns: {
-          minYear: 2025,
-          maxYear: 2026,
-          months: true,
-          years: true,
-        },
-      });
-    </script>
-    <!-- 두번째 섹션 -->
-    <!-- 리뷰 -->
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 12,
-        centeredSlides: true,
-      });
-    </script>
-    <!-- 세번째 섹션 -->
-    <!-- 객실 전체보기 -->
-    <script>
-      $('.all_room').on('click', function () {
-        $('.room').css({ display: 'block' });
-        $('.all_room').css({ display: 'none' });
-        $('.box_wrap').css({ marginBottom: '40px' });
-      });
-    </script>
+    <script src="../js/page_detail.js"></script>
   </body>
 </html>

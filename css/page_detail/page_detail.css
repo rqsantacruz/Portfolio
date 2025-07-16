@@ -46,9 +46,6 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
-.head_left > button:hover .all_menu {
-  display: flex;
-}
 .all_menu {
   display: none;
   flex-direction: column;
@@ -186,7 +183,7 @@ header .search input[type='text'],
 .sec1 > .con .img_wrap {
   display: flex;
   height: 512px;
-  gap: 8px;
+  gap: 12px;
   margin: 40px auto;
 }
 .sec1 > .con .img_wrap > .left {
@@ -683,21 +680,23 @@ header .search input[type='text'],
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
   top: 30px;
   left: 0;
   display: none;
 }
-.list_btn > button:hover > .btn_list {
-  display: flex;
+.list_btn > button > .btn_list > li {
+  margin-bottom: 20px;
 }
 .list_btn > button > .btn_list > li:hover {
   color: #8744ff;
 }
 .list_btn > button > .btn_list > li:first-child {
   font-weight: 700;
+}
+.list_btn > button > .btn_list > li:last-child {
+  margin-bottom: 0;
 }
 /* 리뷰 카드 */
 .sec10 .con_wrap > .review {

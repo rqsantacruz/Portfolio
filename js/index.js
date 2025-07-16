@@ -1,3 +1,7 @@
+/* 헤더 */
+$('.menu').on('click', function () {
+  $('.all_menu').toggle();
+});
 /* 첫번째 섹션 */
 // 숙소 버튼
 $(function () {

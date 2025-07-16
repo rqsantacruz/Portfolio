@@ -60,9 +60,6 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
-.head_left > button:hover .all_menu {
-  display: flex;
-}
 .all_menu {
   display: none;
   flex-direction: column;

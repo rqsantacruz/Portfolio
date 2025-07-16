@@ -35,9 +35,7 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
-.head_left > button:hover .all_menu {
-  display: flex;
-}
+
 .all_menu {
   display: none;
   flex-direction: column;
@@ -299,7 +297,6 @@ h1 {
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
   top: 30px;
@@ -307,14 +304,17 @@ h1 {
   display: none;
   z-index: 10;
 }
-.list_btn > button:hover > .btn_list {
-  display: flex;
+.list_btn > button > .btn_list > li {
+  margin-bottom: 20px;
 }
 .list_btn > button > .btn_list > li:hover {
   color: #8744ff;
 }
 .list_btn > button > .btn_list > li:first-child {
   font-weight: 700;
+}
+.list_btn > button > .btn_list > li:last-child {
+  margin-bottom: 0;
 }
 /* 카드 */
 .card_con {
