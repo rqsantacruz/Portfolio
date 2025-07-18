@@ -28,8 +28,8 @@ const picker = new Litepicker({
   allowRepick: false,
   minDays: 2,
   format: 'YYYY-MM-DD',
-  numberOfMonths: 2,
-  numberOfColumns: 2,
+  numberOfMonths: 1,
+  numberOfColumns: 1,
   lang: 'ko',
   minDate: today,
   tooltipText: { one: '박', other: '박' }, // 기본 비워두기
@@ -212,6 +212,7 @@ var swiper = new Swiper('.sec4swiper', {
   centeredSlides: true,
   slidesPerView: 3,
   spaceBetween: 12,
+  loop: true,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,

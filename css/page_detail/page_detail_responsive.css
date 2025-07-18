@@ -152,7 +152,37 @@
   .sec10 .con_wrap > .review > .right {
     width: 100%;
   }
+  /* 푸터 */
+  .foot_top {
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+  }
+  .foot_top > ul {
+    flex-direction: column;
+    gap: 8px;
+    line-height: 24px;
+    margin: 8px 0;
+  }
+  /* footer bottom */
+  .foot_bottom {
+    width: 95%;
+    padding: 50px 8px;
+    flex-direction: column;
+  }
+  .foot_bottom .left {
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .foot_bottom .center {
+    margin: 0 auto;
+  }
+  .foot_bottom .right {
+    margin: 0 auto;
+  }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .sec1 > .con .img_wrap > .left {
     width: 50%;

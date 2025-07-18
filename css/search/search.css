@@ -314,6 +314,7 @@ h3 {
 }
 .responsive_chip > button > img {
   margin-left: 2px;
+  width: 16px;
 }
 .result {
   width: 100%;
