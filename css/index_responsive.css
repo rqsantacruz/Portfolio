@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 모바일 ~ 큰태블릿 */
-@media screen and (min-width: 320px) and (max-width: 1024px) {
+@media screen and (min-width: 320px) and (max-width: 1439px) {
   /* 공통 */
   .con {
     width: 95%;
@@ -102,7 +102,13 @@
     line-height: 16px;
   }
   .card button {
+    width: 20px;
+    height: 20px;
     top: 140px;
+  }
+  .card button > img {
+    width: 20px;
+    height: 20px;
   }
   .card_text h3 {
     font-size: 14px;
@@ -172,10 +178,7 @@
     font-size: 14px;
   }
   .con_wrap {
-    height: 190px;
-  }
-  .box_wrap {
-    height: 190px;
+    height: 180px;
   }
   .box_wrap > .box {
     width: 180px;
@@ -243,6 +246,10 @@
     gap: 16px;
     flex-wrap: wrap;
     margin: 0 auto;
+    width: 100%;
+  }
+  .left > .left_wrap {
+    margin: 0 auto;
   }
   .center {
     margin: 0 auto;
@@ -252,7 +259,7 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 1024px) {
+@media screen and (min-width: 426px) and (max-width: 1439px) {
   /* 네번째 섹션 */
   .rec_wrap a {
     font-size: 14px;
@@ -266,7 +273,7 @@
     height: 180px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   /* 메인이미지 */
   .sec1 {
     height: 450px;
@@ -317,8 +324,37 @@
     font-weight: 400;
     padding-bottom: 60px;
   }
+  /* 푸터 */
+  .foot_top {
+    padding: 8px 20px;
+  }
+  .foot_top > ul {
+    flex-direction: row;
+    gap: 50px;
+  }
+  /* footer bottom */
+  .foot_bottom {
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .left {
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .center {
+    margin: 0;
+  }
+  .right {
+    margin: 0;
+  }
 }
-@media screen and (min-width: 1025px) and (max-width: 1439px) {
+@media screen and (min-width: 779px) and (max-width: 1439px) {
+  .foot_bottom {
+    width: 779px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   /* 헤더 */
   .header {
     width: 100%;
@@ -351,6 +387,28 @@
   .head_right p {
     display: none;
   }
+  /* 섹션2 */
+  .sec2 > .con > h3 {
+    font-size: 20px;
+  }
+  .sec2 .card {
+    height: 300px;
+  }
+  .sec2 .card > a > .card_window {
+    height: 140px;
+  }
+  /* 카드 텍스트 */
+  .card button {
+    top: 152px;
+  }
+  .card_text h3 {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  .card_text h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
   /* 섹션2 - 스와이퍼 화살표 */
   .sec2 .swiper2-prev,
   .sec2 .swiper2-next {
@@ -361,15 +419,46 @@
   }
   /* 네번째 섹션 */
   .sec4 .rec_card {
-    height: 280px;
+    height: 240px;
   }
   .sec4 .rec_card.swiper-slide-active {
-    height: 340px;
+    height: 300px;
   }
   .rec_wrap a {
-    font-size: 14px;
+    font-size: 22px;
     font-weight: 400;
     padding-bottom: 60px;
+  }
+  /* 다섯번째 섹션 */
+  .sec5 > h3 {
+    font-size: 20px;
+  }
+  .sec5 > p {
+    font-size: 14px;
+  }
+  .con_wrap {
+    height: 240px;
+  }
+  .box_wrap > .box {
+    width: 240px;
+    height: 140px;
+  }
+  .box_wrap > .box > a {
+    padding: 10px 20px;
+  }
+  .box_wrap > .box > a > h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .box_wrap > .box > a > p {
+    font-size: 14px;
+    bottom: -14px;
+  }
+  .box_wrap > .box > a:hover > h3 {
+    transform: translateY(-30px);
+  }
+  .box_wrap > .box > a:hover > p {
+    transform: translateY(-30px);
   }
   /* 여섯번째 섹션 */
   .sec2 .swiper6-prev,
@@ -377,7 +466,43 @@
     display: none;
   }
 }
-
+@media screen and (min-width: 1201px) and (max-width: 1439px) {
+  /* 두번째 섹션 */
+  .sec2 > .con > h3 {
+    font-size: 20px;
+  }
+  .sec2 .card {
+    height: 360px;
+  }
+  .sec2 .card > a > .card_window {
+    height: 200px;
+  }
+  /* 카드 텍스트 */
+  .card button {
+    width: 24px;
+    height: 24px;
+    top: 212px;
+  }
+  .card button > img {
+    width: 24px;
+    height: 24px;
+  }
+  .card_text h3 {
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+  .card_text h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  /* 네번째 섹션 */
+  .sec4 .rec_card {
+    height: 300px;
+  }
+  .sec4 .rec_card.swiper-slide-active {
+    height: 360px;
+  }
+}
 @media screen and (min-width: 1440px) and (max-width: 1800px) {
   /* 섹션2 - 스와이퍼 화살표 */
   .sec2 .swiper2-prev,

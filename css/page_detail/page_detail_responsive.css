@@ -154,7 +154,6 @@
   }
   /* 푸터 */
   .foot_top {
-    width: 100%;
     height: fit-content;
     padding: 8px;
   }
@@ -170,15 +169,19 @@
     padding: 50px 8px;
     flex-direction: column;
   }
-  .foot_bottom .left {
+  .left {
     gap: 16px;
     flex-wrap: wrap;
     margin: 0 auto;
+    width: 100%;
   }
-  .foot_bottom .center {
+  .left > .left_wrap {
     margin: 0 auto;
   }
-  .foot_bottom .right {
+  .center {
+    margin: 0 auto;
+  }
+  .right {
     margin: 0 auto;
   }
 }
@@ -206,6 +209,35 @@
   /* 컨텐츠내용 */
   .sec3 > .con .con_wrap > .window {
     width: 50%;
+  }
+  /* 푸터 */
+  .foot_top {
+    padding: 8px 20px;
+  }
+  .foot_top > ul {
+    flex-direction: row;
+    gap: 50px;
+  }
+  /* footer bottom */
+  .foot_bottom {
+    width: fit-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .left {
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .center {
+    margin: 0;
+  }
+  .right {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 779px) and (max-width: 1439px) {
+  .foot_bottom {
+    width: 779px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {

@@ -770,6 +770,7 @@ footer {
   width: 100%;
   font-size: 14px;
   color: #999;
+  overflow: hidden;
 }
 /* footer top */
 .foot_top {

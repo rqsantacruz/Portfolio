@@ -457,8 +457,8 @@ h1 {
   position: relative;
 }
 .card button {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,8 +470,8 @@ h1 {
   cursor: pointer;
 }
 .card button > img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   align-items: center;
   background-color: #fff;
 }
@@ -883,6 +883,7 @@ footer {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .foot_top > ul {
   display: flex;
@@ -910,7 +911,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
-.left > p {
+.left p {
   line-height: 20px;
 }
 .center {

@@ -221,7 +221,13 @@ var swiper = new Swiper('.sec4swiper', {
     slideShadows: true,
   },
   breakpoints: {
+    768: {
+      spaceBetween: 20,
+    },
     1024: {
+      spaceBetween: 40,
+    },
+    1440: {
       spaceBetween: 60,
     },
   },
