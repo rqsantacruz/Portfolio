@@ -106,6 +106,27 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* 메인이미지 */
+  .sec1 {
+    padding: 0 100px;
+  }
+  .sec1 > h2 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+  .sec1 > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /* 푸터 */
+  .foot_top {
+    padding: 8px 20px;
+  }
+  .foot_top > ul {
+    flex-direction: row;
+    gap: 50px;
+  }
   /* 푸터 */
   .foot_top {
     padding: 8px 20px;

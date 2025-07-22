@@ -69,7 +69,7 @@
   }
   .top_card {
     height: fit-content;
-    padding-bottom: 28px;
+    border: none;
   }
   .card {
     width: fit-content;
@@ -84,6 +84,7 @@
   }
   .text_wrap {
     width: fit-content;
+    height: 219px;
     flex-direction: column;
   }
   /* 푸터 */
@@ -127,8 +128,7 @@
     width: 100px;
   }
   .top_card {
-    height: 308px;
-    padding-bottom: 28px;
+    height: fit-content;
   }
   .top_card > .card {
     width: 612px;

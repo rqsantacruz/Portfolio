@@ -58,12 +58,12 @@
     padding: 60px 0;
   }
   .text_wrap {
-    width: fit-content;
+    width: 100%;
     flex-direction: column;
     gap: 60px;
   }
   .text_box {
-    width: 300px;
+    width: 100%;
     height: fit-content;
   }
   .text_box:first-child {
@@ -83,45 +83,45 @@
   }
   /* 세번째, 네번째 섹션 */
   .con_wrap {
+    display: flex;
     width: fit-content;
     height: fit-content;
     flex-direction: column;
     margin: 0 auto;
   }
   .sec3 .con_wrap > img {
-    width: 294px;
+    width: 300px;
     height: 200px;
     margin: 0 auto;
+    order: 1;
   }
   .sec3 .con_wrap > .text_wrap {
     width: fit-content;
     text-align: center;
     gap: 20px;
+    order: 2;
   }
   .sec3 .con_wrap > .text_wrap > h2 {
     font-size: 20px;
     line-height: 36px;
   }
   .sec3 .con_wrap > .text_wrap > p {
+    width: 100%;
     font-size: 16px;
     line-height: 28px;
   }
   /* 다섯번째 섹션 */
-  .con_wrap {
-    width: fit-content;
-    height: fit-content;
-    flex-direction: column;
-    margin: 0 auto;
-  }
   .sec5 .con_wrap > img {
-    width: 294px;
+    width: 300px;
     height: 200px;
     margin: 0 auto;
+    order: 1;
   }
   .sec5 .con_wrap > .text_wrap {
     width: fit-content;
     text-align: center;
     gap: 20px;
+    order: 2;
   }
   .sec5 .con_wrap > .text_wrap > h2 {
     font-size: 20px;
@@ -165,6 +165,19 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* 메인이미지 */
+  .sec1 {
+    padding: 0 100px;
+  }
+  .sec1 > h2 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+  .sec1 > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
   /* 푸터 */
   .foot_top {
     padding: 8px 20px;
@@ -195,7 +208,7 @@
     width: 779px;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   .sec1 {
     height: 450px;
     padding: 40px 120px;
@@ -209,7 +222,44 @@
     font-size: 20px;
     line-height: 30px;
   }
-  .card_wrap {
-    flex-direction: row;
+  /* 두번째 섹션 */
+  .text_box > h3 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+  .text_box > p {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  /* 세번째, 네번째 섹션 */
+  .sec3 .con_wrap > img {
+    width: 400px;
+    height: 300px;
+  }
+  .sec3 .con_wrap > .text_wrap {
+    gap: 30px;
+  }
+  .sec3 .con_wrap > .text_wrap > h2 {
+    font-size: 24px;
+  }
+  .sec3 .con_wrap > .text_wrap > p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  /* 다섯번째 섹션 */
+  .sec5 .con_wrap > img {
+    width: 400px;
+    height: 300px;
+  }
+  .sec5 .con_wrap > .text_wrap {
+    gap: 30px;
+  }
+  .sec5 .con_wrap > .text_wrap > h2 {
+    font-size: 24px;
+  }
+  .sec5 .con_wrap > .text_wrap > p {
+    font-size: 20px;
+    line-height: 32px;
   }
 }

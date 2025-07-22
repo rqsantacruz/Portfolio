@@ -1,14 +1,13 @@
 @charset "utf-8";
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 399px) {
+  .con {
+    width: 95%;
+  }
   .btn_wrap {
     width: 300px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1439px) {
-  /* 공통 */
-  .con {
-    width: 95%;
-  }
   /* 헤더 */
   .header {
     width: 100%;
