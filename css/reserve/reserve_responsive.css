@@ -3,9 +3,6 @@
   .con {
     width: 95%;
   }
-  .btn_wrap {
-    width: 300px;
-  }
 }
 @media screen and (min-width: 320px) and (max-width: 1439px) {
   /* 헤더 */

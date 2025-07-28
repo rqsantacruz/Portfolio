@@ -181,7 +181,7 @@
   .center {
     margin: 0 auto;
   }
-  .right {
+  .foot_bottom .right {
     margin: 0 auto;
   }
 }
@@ -231,7 +231,7 @@
   .center {
     margin: 0;
   }
-  .right {
+  .foot_bottom .right {
     margin: 0;
   }
 }

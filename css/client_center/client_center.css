@@ -114,13 +114,16 @@ h1 {
   margin: 40px 0;
 }
 .call_wrap {
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f6f6f6;
   padding: 40px 48px;
   border-radius: 15px;
+  margin: 0 auto;
   margin-bottom: 60px;
+  box-sizing: border-box;
 }
 .call_wrap h2 {
   font-size: var(--sec-title-size2);
